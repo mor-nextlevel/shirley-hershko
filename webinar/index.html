@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>הדרכת זום מיוחדת | ד״ר שירלי הרשקו</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lp.css">
+<style>
+/* ---- round 5 (20.10): back to the dark round 3 language, Mor's new copy, more pictures ---- */
+.nw{white-space:nowrap}
+@media (max-width:760px){.br-d{display:none}}
+.vz{width:min(220px,74%);height:auto;overflow:visible;filter:drop-shadow(0 20px 26px rgba(0,0,0,.55))}
+
+/* 1 · hero: her smile cut from the background, inside the rings. Nothing floats around her */
+.portrait.cut>img{height:100%;width:auto;max-width:112%;object-fit:contain;object-position:50% 100%}
+.hero h1{font-size:clamp(28px,7.2vw,50px);max-width:680px}
+.hero__kicker{max-width:600px}
+.hero__pre{margin-top:18px;max-width:600px;font-weight:700;font-size:clamp(17px,2vw,21px);line-height:1.45;color:var(--a1)}
+.hero__pre+h1{margin-top:10px}
+.hero .btn{display:block;width:100%;max-width:540px;margin-top:26px}
+@media (min-width:980px){.hero .wrap{max-width:1320px}.hero__copy{width:100%}.hero h1{max-width:none;font-size:clamp(28px,3.3vw,48px)}.portrait{width:min(31vw,430px)}}
+.ticket{margin-top:22px;display:flex;align-items:center;gap:14px;padding:12px 18px 12px 14px;border-radius:18px;max-width:560px;text-align:right;
+  border:1px solid var(--a2-line);background:linear-gradient(165deg,rgba(var(--a2-rgb),.1),rgba(255,255,255,.02));box-shadow:0 20px 50px -30px rgba(0,0,0,.9)}
+.ticket__ico{position:relative;flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--a1-grad);color:#fff;
+  box-shadow:0 10px 24px -10px rgba(var(--a1-rgb),.9)}
+.ticket__ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ticket__ico::after{content:"";position:absolute;top:-4px;left:-4px;width:12px;height:12px;border-radius:50%;background:var(--ok);border:2px solid var(--bg);animation:onAir 1.6s ease-in-out infinite}
+@keyframes onAir{50%{box-shadow:0 0 0 6px rgba(var(--ok-rgb),0);opacity:.55}}
+.ticket p{font-weight:700;font-size:clamp(17px,1.9vw,20px);line-height:1.45}
+
+/* countdown to 11.11.26 20:30 */
+.cd{display:flex;justify-content:center;gap:clamp(8px,1.6vw,14px);margin-top:18px}
+.cd div{min-width:clamp(62px,15vw,84px);padding:12px 6px 10px;border-radius:16px;text-align:center;border:1px solid rgba(var(--ivory-rgb),.1);
+  background:linear-gradient(170deg,var(--sf-4),var(--sf-1));box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 40px -26px rgba(0,0,0,.9)}
+.cd b{display:block;font-weight:900;font-size:clamp(28px,4.4vw,40px);line-height:1;font-variant-numeric:tabular-nums;direction:ltr}
+.cd div:last-child b{color:var(--a1)}
+.cd span{display:block;margin-top:6px;font-size:14px;color:var(--t-mid)}
+@media (min-width:980px){.hero .cd{justify-content:flex-start}}
+
+/* 2 · I know: every thing you tried gets its own little live picture */
+.know h2{text-align:center}
+.know__all{margin-top:14px;text-align:center;font-weight:300;font-size:clamp(20px,2.6vw,27px);color:var(--t-mid)}
+.know .use p{font-weight:500;text-align:center}
+/* the diagnosis form, line by line */
+.five .board{fill:var(--sf-4);stroke:rgba(var(--ivory-rgb),.16);stroke-width:1.5}
+.five .clip{fill:var(--a2);stroke:var(--sf-1);stroke-width:2}
+.five .ln{fill:rgba(var(--ivory-rgb),.28);animation:fiveLn 9s infinite;animation-delay:var(--d)}
+.five .box{fill:none;stroke:rgba(var(--ivory-rgb),.45);stroke-width:1.8}
+.five .tk{fill:none;stroke:var(--a1);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:20;stroke-dashoffset:20;animation:fiveTk 9s var(--ease-out) infinite;animation-delay:var(--d)}
+@keyframes fiveTk{0%,4%{stroke-dashoffset:20}9%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes fiveLn{0%,6%{opacity:1}10%,90%{opacity:.35}100%{opacity:1}}
+/* the talk with the professionals */
+.talk .bb{transform-box:fill-box;transform-origin:50% 100%;opacity:0;animation:pop 8s var(--ease-out) infinite;animation-delay:var(--d)}
+.talk .them{fill:#2a2a2e}
+.talk .me{fill:var(--a1)}
+.talk .tl{fill:rgba(var(--ivory-rgb),.34)}
+.talk .ml{fill:rgba(255,255,255,.72)}
+.talk .dt{fill:rgba(var(--ivory-rgb),.7);transform-box:fill-box;transform-origin:center;animation:dot 1.1s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes pop{0%,3%{opacity:0;transform:translateY(14px) scale(.86)}10%,86%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+@keyframes dot{0%,100%{transform:none;opacity:.5}40%{transform:translateY(-5px);opacity:1}}
+/* healthy food, and the capsules on top */
+.food .ap{fill:var(--a1)}
+.food .hl{fill:none;stroke:rgba(255,255,255,.55);stroke-width:4;stroke-linecap:round}
+.food .stem{fill:none;stroke:var(--a2-soft);stroke-width:4;stroke-linecap:round}
+.food .leaf{fill:var(--a2)}
+.food .apple{transform-box:fill-box;transform-origin:50% 90%;animation:apple 3.9s ease-in-out infinite}
+.food .c1{fill:var(--ivory)}
+.food .c2{fill:var(--a1-soft)}
+.food .cap{opacity:0;animation:capDrop 3.9s linear infinite;animation-delay:var(--d)}
+@keyframes capDrop{0%{transform:translate(var(--x),-16px) rotate(var(--r0));opacity:0}12%,72%{opacity:1}100%{transform:translate(var(--x),200px) rotate(var(--r1));opacity:0}}
+@keyframes apple{50%{transform:scale(1.04)}}
+/* up early: the clock rings, the sun comes up */
+.alarm .sun{fill:var(--a1-soft);animation:sunUp 8s ease-in-out infinite}
+.alarm .rays{fill:none;stroke:var(--a1-soft);stroke-width:3;stroke-linecap:round;transform-box:fill-box;transform-origin:center;animation:spinR 16s linear infinite}
+.alarm .hz{stroke:rgba(var(--ivory-rgb),.22);stroke-width:2;stroke-linecap:round}
+.alarm .clk{transform-box:fill-box;transform-origin:50% 60%;animation:ring 4s ease-in-out infinite}
+.alarm .bell{fill:var(--a2-soft)}
+.alarm .face{fill:var(--sf-4);stroke:var(--ivory);stroke-width:3.4}
+.alarm .hh{fill:none;stroke:var(--ivory);stroke-width:4;stroke-linecap:round}
+.alarm .mh{fill:none;stroke:var(--a1);stroke-width:3.4;stroke-linecap:round}
+.alarm .legs,.alarm .top{fill:none;stroke:var(--a2-soft);stroke-width:4;stroke-linecap:round}
+.alarm .pin{fill:var(--a1)}
+.alarm .wv{fill:none;stroke:var(--a1);stroke-width:3;stroke-linecap:round;opacity:0;animation:wave 4s ease-out infinite}
+.alarm .w2{animation-delay:.12s}
+@keyframes sunUp{0%,10%{transform:translateY(64px)}55%,100%{transform:none}}
+@keyframes spinR{to{transform:rotate(360deg)}}
+@keyframes ring{0%,58%,82%,100%{transform:none}61%{transform:rotate(-8deg)}64%{transform:rotate(8deg)}67%{transform:rotate(-8deg)}70%{transform:rotate(8deg)}73%{transform:rotate(-6deg)}76%{transform:rotate(6deg)}79%{transform:rotate(-3deg)}}
+@keyframes wave{0%,58%{opacity:0}62%,78%{opacity:1}86%,100%{opacity:0}}
+/* the dark room: the blind comes down over the moon */
+.night{grid-column:1/-1;position:relative;display:grid;gap:22px;align-items:center;justify-items:center;padding:clamp(26px,4vw,46px);border-radius:22px;overflow:hidden;text-align:center;
+  background:radial-gradient(46% 70% at 10% 18%,rgba(var(--a2-rgb),.13),transparent 70%),linear-gradient(170deg,#131315,#08080a);border:1px solid rgba(var(--a2-rgb),.22);
+  box-shadow:0 40px 90px -46px rgba(0,0,0,.95)}
+.night::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.7;animation:twinkle 5s ease-in-out infinite;
+  background-image:radial-gradient(1.4px 1.4px at 12% 24%,#fff,transparent),radial-gradient(1px 1px at 28% 70%,#fff,transparent),radial-gradient(1.2px 1.2px at 46% 14%,#fff,transparent),
+    radial-gradient(1px 1px at 64% 82%,#fff,transparent),radial-gradient(1.6px 1.6px at 82% 30%,#fff,transparent),radial-gradient(1px 1px at 92% 64%,#fff,transparent),radial-gradient(1.2px 1.2px at 6% 88%,#fff,transparent)}
+@keyframes twinkle{50%{opacity:.3}}
+.night>*{position:relative}
+.night p{font-weight:500;font-size:clamp(18px,2.2vw,23px);line-height:1.6;color:var(--t-hi)}
+.win{width:clamp(110px,13vw,140px);height:auto;overflow:visible;filter:drop-shadow(0 24px 30px rgba(0,0,0,.7))}
+.win .sky{fill:#1b2033}
+.win .moon{fill:#f4f1e6}
+.win .st{fill:#fff;animation:twinkle 2.6s ease-in-out infinite;animation-delay:var(--d)}
+.win .blind{animation:blind 7s var(--ease) infinite}
+.win .blind rect{fill:#0d0d0f}
+.win .blind path{fill:none;stroke:rgba(var(--ivory-rgb),.12);stroke-width:1.4}
+.win .blind .cord{stroke:var(--a2);stroke-width:2}
+.win .fr{fill:none;stroke:var(--a2-soft);stroke-width:4}
+.win .bars{fill:none;stroke:var(--a2-soft);stroke-width:3}
+.win .rod{fill:var(--a2)}
+@keyframes blind{0%,14%{transform:translateY(-134px)}46%,84%{transform:none}100%{transform:translateY(-134px)}}
+@media (min-width:860px){.night{grid-template-columns:auto 1fr;gap:clamp(26px,4vw,48px);text-align:right;justify-items:start}}
+/* lit for three days, then it drops */
+.streak{display:flex;justify-content:center;align-items:center;gap:clamp(6px,1.6vw,14px);margin:clamp(34px,4.4vw,50px) auto 0;direction:rtl}
+.streak i{position:relative;width:clamp(34px,7vw,50px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;border:1.6px solid rgba(var(--ivory-rgb),.18);
+  background:rgba(var(--ivory-rgb),.03);animation:stDrop 7s var(--ease) infinite;animation-delay:var(--d)}
+.streak i svg{width:52%;height:52%;fill:var(--a1);opacity:0}
+.streak i.on{animation:stOn 7s var(--ease-out) infinite;animation-delay:var(--d)}
+.streak i.on svg{animation:stFlame 7s var(--ease-out) infinite;animation-delay:var(--d)}
+@keyframes stOn{0%,4%{border-color:rgba(var(--ivory-rgb),.18);background:rgba(var(--ivory-rgb),.03);box-shadow:none}
+  10%,52%{border-color:var(--a1);background:rgba(var(--a1-rgb),.14);box-shadow:0 0 18px rgba(var(--a1-rgb),.5)}
+  60%,100%{border-color:rgba(var(--ivory-rgb),.12);background:rgba(var(--ivory-rgb),.02);box-shadow:none}}
+@keyframes stFlame{0%,4%{opacity:0;transform:scale(.3)}10%,50%{opacity:1;transform:none}58%,100%{opacity:0;transform:translateY(6px) scale(.5)}}
+@keyframes stDrop{0%,46%{transform:none;opacity:1;border-color:rgba(var(--ivory-rgb),.18)}
+  56%,92%{transform:translateY(22px) rotate(var(--r));opacity:.45;border-color:rgba(var(--a1-rgb),.55)}100%{transform:none;opacity:1}}
+.know__but{margin-top:clamp(26px,3.6vw,38px);text-align:center;font-weight:900;font-size:clamp(25px,3.8vw,40px);line-height:1.25;color:var(--a1)}
+
+/* 3 · you stepped on yourself: the labels stuck on a brain that "broke" */
+.self h2{text-align:center}
+.slaps{display:grid;gap:22px;justify-items:center;max-width:1100px;margin:clamp(36px,5vw,60px) auto 0}
+.slaps__brain{position:relative;width:min(250px,64vw);aspect-ratio:1;display:grid;place-items:center;margin-bottom:8px}
+.slaps__brain::before{content:"";position:absolute;inset:10%;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--a1-rgb),.26),transparent);filter:blur(8px)}
+.slaps__brain .rg{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(var(--a2-rgb),.3);animation:orbit 40s linear infinite}
+.slaps__brain img{position:relative;width:56%;animation:glitch 5s steps(1) infinite}
+.slaps__brain svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.crack path{fill:none;stroke:var(--a1);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:130;stroke-dashoffset:130;animation:crack 5s var(--ease-out) infinite;
+  filter:drop-shadow(0 0 5px rgba(var(--a1-rgb),.9))}
+@keyframes glitch{0%,60%,72%,100%{transform:none;filter:none}61%{transform:translate(-5px,1px);filter:drop-shadow(4px 0 0 rgba(var(--a1-rgb),.85))}
+  63%{transform:translate(4px,-2px);filter:drop-shadow(-4px 0 0 rgba(var(--a1-rgb),.85))}66%{transform:translate(-2px,2px);filter:grayscale(1) brightness(.6)}69%{transform:translate(2px,0);filter:grayscale(1) brightness(.6)}}
+@keyframes crack{0%,58%{stroke-dashoffset:130;opacity:1}68%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+/* only the paper and the tape tilt, the words stay straight */
+.note{position:relative;isolation:isolate;width:min(100%,400px);padding:30px 24px 24px;text-align:center;color:#18181b;font-weight:500;font-size:clamp(18px,1.9vw,20px);line-height:1.55}
+.note::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:3px 3px 16px 3px;rotate:var(--r);transition:rotate .5s var(--ease-out);
+  background:linear-gradient(175deg,#fbf9f4,#ebe6db);box-shadow:0 28px 50px -22px rgba(0,0,0,.9),inset 0 -12px 20px -16px rgba(0,0,0,.18)}
+.note::before{content:"";position:absolute;top:-12px;left:50%;width:86px;height:24px;margin-left:-43px;background:rgba(var(--a1-rgb),.82);rotate:calc(var(--r) * -1.8);
+  box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.note:hover::after{rotate:0deg}
+@media (min-width:900px){
+  .slaps{grid-template-columns:1fr auto 1fr;align-items:center;column-gap:clamp(26px,4vw,60px);row-gap:34px}
+  .slaps__brain{grid-column:2;grid-row:1/3;width:min(290px,24vw);margin:0}
+  .slaps .n1{grid-column:1;grid-row:1}.slaps .n2{grid-column:1;grid-row:2}.slaps .n3{grid-column:3;grid-row:1}.slaps .n4{grid-column:3;grid-row:2}
+}
+.said{max-width:980px;margin:clamp(50px,7vw,84px) auto 0;text-align:center;font-weight:900;font-size:clamp(28px,5vw,56px);line-height:1.2;letter-spacing:-.01em}
+.js .said.reveal{transform:scale(.84);filter:blur(10px)}
+.js .said.reveal.in{transform:none;filter:none;transition:opacity .9s var(--ease-out),transform 1.2s var(--ease-out),filter .9s var(--ease-out)}
+.heard{max-width:680px;margin:clamp(22px,3vw,32px) auto 0;text-align:center;font-weight:300;font-size:clamp(18px,2.1vw,22px);line-height:1.65;color:var(--t-mid)}
+.stagepics{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.6vw,18px);max-width:1100px;margin:clamp(34px,4.6vw,54px) auto 0}
+.stagepics figure{border-radius:18px;overflow:hidden;aspect-ratio:3/2;border:1px solid var(--a2-line);box-shadow:0 30px 60px -28px rgba(0,0,0,.95)}
+.stagepics figure:first-child{grid-column:1/-1}
+.stagepics img{width:100%;height:100%;object-fit:cover}
+@media (min-width:860px){
+  .stagepics{grid-template-columns:1fr 1.3fr 1fr;align-items:center}
+  .stagepics figure:first-child{grid-column:auto;order:2;aspect-ratio:4/3}
+  .stagepics figure:nth-child(2){order:1}.stagepics figure:nth-child(3){order:3}
+}
+
+/* 4 · nice to meet you: the path from Jerusalem to the podium */
+.about__photo img{object-position:50% 18%}
+.path{position:relative;max-width:1100px;margin:clamp(60px,8vw,104px) auto 0;display:grid;gap:clamp(64px,9vw,120px)}
+.step{position:relative;display:grid;gap:24px;justify-items:center;text-align:center}
+.step::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 7px rgba(var(--a1-rgb),.14),0 0 22px rgba(var(--a1-rgb),.85)}
+.step__txt{display:grid;gap:26px;justify-items:center;max-width:540px;width:100%}
+.step__txt p{font-size:clamp(18px,2.1vw,22px);line-height:1.7;color:var(--t-hi)}
+.step__viz{display:grid;justify-items:center;width:100%}
+@media (min-width:900px){
+  .path::before{content:"";position:absolute;top:-40px;bottom:-40px;left:50%;width:1px;background:linear-gradient(transparent,var(--a2-line) 8%,var(--a2-line) 92%,transparent)}
+  .step{grid-template-columns:1fr 1fr;column-gap:clamp(80px,10vw,140px);align-items:center;text-align:right;justify-items:stretch}
+  .step::before{position:absolute;left:50%;top:50%;margin:-6px 0 0 -6px}
+  .step__txt{justify-items:start;justify-self:end}
+  .step:nth-child(even) .step__txt{order:2;justify-self:start}
+}
+.plate{display:grid;place-items:center;padding:clamp(28px,3.4vw,40px) clamp(36px,4.4vw,58px);border-radius:24px;
+  background:linear-gradient(165deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid rgba(var(--ivory-rgb),.12);
+  box-shadow:0 34px 80px -40px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.08),0 0 70px -40px rgba(var(--a1-rgb),.5)}
+.plate img{height:clamp(56px,6vw,76px);width:auto}
+.poster{width:min(310px,72vw);border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--a2-line);box-shadow:0 40px 90px -40px rgba(0,0,0,.95)}
+.prize{width:min(100%,520px);border-radius:20px;overflow:hidden;border:1px solid var(--a2-line);
+  box-shadow:0 44px 100px -44px rgba(0,0,0,.95),0 0 90px -40px rgba(var(--a1-rgb),.55)}
+.prize img{width:100%}
+.shot{width:min(100%,360px);border-radius:22px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--a2-line);
+  box-shadow:0 44px 100px -44px rgba(0,0,0,.95),0 0 80px -40px rgba(var(--a1-rgb),.45)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.books{position:relative;display:flex;justify-content:center;align-items:flex-end;width:100%;padding:16px 0 30px;direction:rtl}
+.books::before{content:"";position:absolute;left:6%;right:6%;bottom:14px;height:40px;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--a1-rgb),.35),transparent);filter:blur(14px)}
+.books img{position:relative;flex:none;width:clamp(56px,12vw,92px);height:auto;margin-inline:clamp(-12px,-1.4vw,-6px);filter:drop-shadow(0 18px 22px rgba(0,0,0,.7));
+  transition:transform 1.2s var(--ease-out),opacity .9s var(--ease-out)}
+.books img:nth-child(1){transform:rotate(9deg) translateY(16px);z-index:1}
+.books img:nth-child(2){transform:rotate(5deg) translateY(6px);z-index:2}
+.books img:nth-child(3){width:clamp(74px,16vw,120px);z-index:4;transform:translateY(-8px)}
+.books img:nth-child(4){transform:rotate(-4deg) translateY(4px);z-index:3}
+.books img:nth-child(5){transform:rotate(-8deg) translateY(12px);z-index:2}
+.books img:nth-child(6){transform:rotate(-12deg) translateY(24px);z-index:1}
+.js .books:not(.in) img{transform:none;opacity:0}
+.books.in img:nth-child(1){transition-delay:.05s}.books.in img:nth-child(2){transition-delay:.12s}.books.in img:nth-child(4){transition-delay:.19s}
+.books.in img:nth-child(5){transition-delay:.26s}.books.in img:nth-child(6){transition-delay:.33s}
+.pod{display:flex;align-items:center;gap:18px;width:min(100%,420px);padding:16px;border-radius:24px;
+  background:linear-gradient(170deg,var(--sf-4),var(--sf-1));border:1px solid rgba(var(--ivory-rgb),.09);box-shadow:0 30px 70px -34px rgba(0,0,0,.95),0 0 60px -30px rgba(var(--a1-rgb),.45)}
+.pod img{flex:none;width:clamp(104px,26vw,140px);border-radius:16px;box-shadow:0 16px 30px -14px rgba(0,0,0,.8)}
+.pod__ui{flex:1;display:grid;gap:14px;justify-items:center}
+.pod__eq{display:flex;align-items:flex-end;gap:4px;height:46px;direction:ltr}
+.pod__eq i{width:5px;border-radius:3px;background:var(--a1-grad);animation:eq 1.1s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes eq{0%,100%{height:18%}50%{height:100%}}
+.pod__play{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--a1-grad);box-shadow:0 0 0 8px rgba(var(--a1-rgb),.14),0 12px 26px -10px rgba(var(--a1-rgb),.9)}
+.pod__play svg{width:20px;height:20px;fill:#fff;margin-left:3px}
+.pod__bar{width:100%;height:5px;border-radius:99px;background:rgba(var(--ivory-rgb),.12);overflow:hidden;direction:ltr}
+.pod__bar i{display:block;height:100%;width:0;background:var(--a2);animation:podBar 14s linear infinite}
+@keyframes podBar{to{width:100%}}
+/* on TV and in the papers: two rows that drift and can be dragged */
+.about .rows{margin-top:clamp(80px,10vw,130px)}
+.rows__track figure{flex:none;border-radius:16px;overflow:hidden;background:#fff;border:1px solid rgba(var(--ivory-rgb),.08);box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+.rows__track figure img{width:auto;max-width:none;height:190px;border:0;border-radius:0;box-shadow:none;object-fit:contain}
+@media (max-width:760px){.rows__track figure img{width:auto;height:140px;border-radius:0}}
+
+/* 5 · your brain works differently */
+.news{text-align:center}
+.news__ask{font-weight:300;font-size:clamp(20px,2.6vw,27px);color:var(--t-mid)}
+.news h2{margin-top:10px;font-size:clamp(34px,6vw,66px);line-height:1.1}
+.brainorb{position:relative;width:min(240px,62vw);aspect-ratio:1;margin:clamp(30px,4vw,46px) auto 0}
+.brainorb::before{content:"";position:absolute;inset:16%;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--a1-rgb),.28),transparent);filter:blur(10px)}
+.brainorb img{position:absolute;left:50%;top:50%;width:46%;transform:translate(-50%,-50%)}
+.orb{position:absolute;inset:var(--in);border-radius:50%;border:1px dashed rgba(var(--a2-rgb),.32);animation:orbit var(--t) linear infinite;animation-direction:var(--dir)}
+.orb i{position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--c);box-shadow:0 0 14px var(--c)}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.news__live{max-width:780px;margin:clamp(28px,3.8vw,40px) auto 0;font-size:clamp(18px,2.2vw,23px);line-height:1.7;color:var(--t-hi)}
+.zoomwin{position:relative;max-width:820px;margin:clamp(30px,4vw,46px) auto 0;border-radius:18px;overflow:hidden;background:#1c1c1f;border:1px solid rgba(var(--ivory-rgb),.12);
+  box-shadow:0 50px 110px -44px rgba(0,0,0,.95),0 0 90px -40px rgba(var(--a1-rgb),.55)}
+.zoomwin__bar{display:flex;align-items:center;gap:8px;padding:11px 14px;direction:ltr;background:#26262a}
+.zoomwin__bar i{width:11px;height:11px;border-radius:50%;background:#5a5a60}
+.zoomwin__bar i:nth-child(1){background:#ff5f57}.zoomwin__bar i:nth-child(2){background:#febc2e}.zoomwin__bar i:nth-child(3){background:#28c840}
+.zoomwin__bar b{margin-left:auto;width:10px;height:10px;border-radius:50%;background:var(--a1);box-shadow:0 0 10px rgba(var(--a1-rgb),.9);animation:onAir 1.4s ease-in-out infinite}
+.zoomwin img{width:100%}
+.zoomwin__tools{display:flex;justify-content:center;gap:clamp(14px,3vw,26px);padding:12px;background:#26262a;direction:ltr}
+.zoomwin__tools svg{width:22px;height:22px;fill:none;stroke:#d6d6dc;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.zoomwin__tools .end{stroke:#ff5f57}
+
+/* 6 · real science */
+.science{text-align:center}
+.science__big{font-weight:500;font-size:clamp(36px,6.4vw,70px);line-height:1.1;letter-spacing:-.02em}
+.flow{max-width:780px;margin:clamp(24px,3.4vw,36px) auto 0}
+.flow p{font-size:clamp(18px,2.15vw,22px);line-height:1.7;color:var(--t-hi)}
+.nope{display:flex;justify-content:center;gap:clamp(12px,2.4vw,22px);margin:clamp(28px,3.8vw,40px) auto 0}
+.nope span{position:relative;width:clamp(80px,17vw,106px);aspect-ratio:1;border-radius:22px;display:grid;place-items:center;
+  background:linear-gradient(170deg,var(--sf-4),var(--sf-1));border:1px solid rgba(var(--ivory-rgb),.1);box-shadow:0 24px 50px -28px rgba(0,0,0,.95);
+  animation:nopeDim 6s ease-in-out infinite;animation-delay:var(--d)}
+.nope svg{width:46%;height:46%;fill:none;stroke:var(--t-mid);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nope svg.x{position:absolute;inset:14%;width:72%;height:72%;stroke:var(--a1);stroke-width:7;stroke-dasharray:182;stroke-dashoffset:182;animation:nopeX 6s var(--ease-out) infinite;animation-delay:var(--d);
+  filter:drop-shadow(0 0 6px rgba(var(--a1-rgb),.8))}
+@keyframes nopeX{0%,10%{stroke-dashoffset:182;opacity:1}24%,86%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes nopeDim{0%,14%{opacity:1}26%,86%{opacity:.55}100%{opacity:1}}
+.science .browser{max-width:640px;background:#fff}
+.science .browser .browser__bar{background:var(--sf-7)}
+.science .browser img{width:100%}
+.sofar{display:grid;gap:12px;max-width:560px;margin:clamp(34px,4.4vw,50px) auto 0;padding:0;list-style:none;text-align:right}
+.sofar li{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:16px;background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  border:1px solid rgba(var(--ivory-rgb),.08);font-weight:500;font-size:clamp(18px,2.1vw,21px);line-height:1.5}
+.sofar i{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--a1-grad);box-shadow:0 0 16px rgba(var(--a1-rgb),.55)}
+.sofar svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.science .statrail{max-width:760px;margin-top:clamp(34px,4.4vw,50px)}
+.science .statrail p{font-weight:500;font-size:clamp(20px,2.8vw,28px)}
+.power{position:relative;width:min(200px,54vw);aspect-ratio:1;margin:clamp(30px,4vw,44px) auto 0}
+.power svg.rg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.power .tr{fill:none;stroke:rgba(var(--a2-rgb),.14);stroke-width:6}
+.power .fl{fill:none;stroke:url(#gPow);stroke-width:6;stroke-linecap:round;stroke-dasharray:553;stroke-dashoffset:553;transition:stroke-dashoffset 2.2s var(--ease-out) .3s}
+.power.in .fl,.no-js .power .fl{stroke-dashoffset:0}
+.power::before{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--a1-rgb),.35),transparent);filter:blur(10px)}
+.power .bolt{position:absolute;left:50%;top:50%;width:34%;height:34%;transform:translate(-50%,-50%);fill:var(--a1);filter:drop-shadow(0 0 14px rgba(var(--a1-rgb),.9));animation:boltOn 2.6s ease-in-out infinite}
+@keyframes boltOn{50%{filter:drop-shadow(0 0 26px rgba(var(--a1-rgb),1));transform:translate(-50%,-50%) scale(1.08)}}
+.science .close{margin-top:clamp(26px,3.6vw,38px);font-weight:500;font-size:clamp(24px,3.4vw,36px);line-height:1.3}
+
+/* 7 + 10 · the seat: when, countdown, the form and the big button */
+.seat{position:relative;scroll-margin-top:36px;max-width:600px;margin:0 auto;padding:clamp(28px,4vw,44px) clamp(18px,4vw,40px);border-radius:28px;text-align:center;
+  background:linear-gradient(170deg,var(--sf-4),var(--sf-1));box-shadow:0 50px 120px -50px rgba(0,0,0,1),0 0 90px -40px rgba(var(--a1-rgb),.5)}
+.seat::after{content:"";position:absolute;inset:0;border-radius:28px;padding:1.5px;pointer-events:none;opacity:.9;
+  background:linear-gradient(130deg,rgba(var(--a2-rgb),.75),transparent 40%,transparent 60%,rgba(var(--a1-rgb),.75));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.seat__ava{display:block;width:84px;height:84px;border-radius:50%;margin:0 auto 16px;object-fit:cover;border:2px solid var(--a1);
+  box-shadow:0 0 0 6px rgba(var(--a1-rgb),.14),0 14px 30px -12px rgba(0,0,0,.9)}
+.seat__when{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:clamp(21px,2.8vw,28px);line-height:1.2;color:var(--t-hi)}
+.seat__when svg{flex:none;width:26px;height:26px;fill:none;stroke:var(--a1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.seat .cd{margin-top:20px}
+.seat .buyform{margin-top:26px;gap:10px}
+.seat .buyform label{font-size:15px}
+.seat .buyform input{padding:16px 18px}
+.seat .buyform input[dir=rtl]{direction:rtl;text-align:right}
+.seat__ok{display:flex;gap:10px;align-items:center;min-height:44px;cursor:pointer;color:var(--t-mid)!important;font-size:14px!important;line-height:1.5}
+.seat__ok input{flex:none;width:20px!important;height:20px;padding:0!important;accent-color:var(--a1)}
+.seat__note{display:flex;gap:12px;align-items:flex-start;margin-top:22px;text-align:right;font-size:clamp(15.5px,1.8vw,17px);line-height:1.65;color:var(--t-mid)}
+.seat__note svg{flex:none;width:22px;height:22px;margin-top:2px;fill:none;stroke:var(--a2-soft);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.seat .btn{display:block;width:100%;margin-top:24px;font-size:clamp(19px,2.3vw,24px);padding:24px 30px}
+@media (max-width:560px){.seat .btn{padding:21px 14px;font-size:clamp(17px,4.9vw,20px)}}
+.seat__demo{margin-top:12px;font-size:14px;color:var(--t-low)}
+
+/* 8 · they work harder than everyone: the others glide, mine stutters */
+.hard{text-align:center}
+.hard h2{max-width:1200px;margin-inline:auto;font-size:clamp(26px,3.2vw,44px);line-height:1.25}
+.racebox{position:relative;max-width:560px;margin:clamp(32px,4.4vw,50px) auto 0;padding:clamp(28px,4vw,40px) clamp(24px,4.4vw,44px);border-radius:24px;
+  background:linear-gradient(170deg,var(--sf-4),var(--sf-1));border:1px solid rgba(var(--ivory-rgb),.09);box-shadow:0 40px 90px -46px rgba(0,0,0,.95)}
+.racebox::after{content:"";position:absolute;top:18px;bottom:18px;left:clamp(18px,3.6vw,36px);border-left:2px dashed rgba(var(--ivory-rgb),.22)}
+.race{position:relative;z-index:1;display:grid;gap:24px}
+.race__lane{position:relative;height:10px;border-radius:99px;background:rgba(var(--ivory-rgb),.08)}
+.race__lane i{position:absolute;inset-block:0;inset-inline-start:0;width:0;border-radius:inherit;background:rgba(var(--ivory-rgb),.4);animation:raceOk 6s var(--ease) infinite}
+.race__lane i::after{content:"";position:absolute;inset-inline-end:-7px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--ivory);box-shadow:0 0 12px rgba(var(--ivory-rgb),.5)}
+.race__lane:nth-child(2) i{animation-delay:.3s}
+.race__lane:nth-child(4) i{animation-delay:.15s}
+.race__lane.me i{background:var(--a1-grad);animation-name:raceMe}
+.race__lane.me i::after{background:var(--a1);box-shadow:0 0 16px rgba(var(--a1-rgb),.95)}
+@keyframes raceOk{0%{width:0}42%,86%{width:100%}100%{width:0}}
+@keyframes raceMe{0%{width:0}12%,20%{width:17%}28%{width:9%}40%,48%{width:28%}56%{width:18%}68%,74%{width:34%}86%{width:22%}100%{width:0}}
+.hard .lead{margin-top:clamp(30px,4vw,44px);font-weight:500;font-size:clamp(22px,3vw,32px)}
+.free{width:min(340px,78vw);margin:clamp(30px,4vw,44px) auto 0;border-radius:24px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--a2-line);
+  box-shadow:0 44px 100px -44px rgba(0,0,0,.95),0 0 80px -40px rgba(var(--a1-rgb),.4)}
+.free img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+
+/* 9 · who it is for: a letter, her photo stays beside it (clip, not hidden, so the photo can stay pinned) */
+.who.sec{overflow:hidden;overflow:clip}
+.letter{display:grid;gap:clamp(30px,5vw,70px);align-items:start;max-width:1100px;margin-inline:auto}
+.letter__txt{text-align:center}
+.letter__txt h2{font-size:clamp(30px,4.8vw,52px);line-height:1.2;color:var(--t-hi)}
+.letter__txt p{margin-top:1.05em;font-size:clamp(18px,2.1vw,21px);line-height:1.75;color:var(--t-hi)}
+.letter__txt h2+p{margin-top:clamp(20px,2.6vw,28px)}
+.letter__pic{width:min(300px,76vw);margin-inline:auto;border-radius:24px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--a2-line);
+  box-shadow:0 44px 100px -44px rgba(0,0,0,.95),0 0 80px -40px rgba(var(--a1-rgb),.4)}
+.letter__pic img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.sign{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:clamp(34px,5vw,50px)}
+.sign img{width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--a1)}
+.sign p{margin:0!important;font-weight:700}
+@media (min-width:900px){
+  .letter{grid-template-columns:1.25fr .85fr}
+  .letter__txt{text-align:right}
+  .letter__pic{order:0;position:sticky;top:90px;width:100%;aspect-ratio:2/3}
+  .sign{justify-content:flex-start}
+}
+
+/* 10 · last call */
+.final{text-align:center}
+.final__t{max-width:900px;margin:0 auto clamp(30px,4vw,44px);font-weight:500;font-size:clamp(28px,4.8vw,50px);line-height:1.2}
+
+@media (prefers-reduced-motion:reduce){
+  .ticket__ico::after,.five .ln,.five .tk,.talk .bb,.talk .dt,.food .apple,.food .cap,.alarm .sun,.alarm .rays,.alarm .clk,.alarm .wv,.night::before,.win .st,.win .blind,
+  .streak i,.streak i svg,.slaps__brain .rg,.slaps__brain img,.crack path,.pod__eq i,.pod__bar i,.orb,.zoomwin__bar b,.nope span,.nope svg.x,.power .bolt,.race__lane i{animation:none!important}
+  .five .tk,.crack path,.nope svg.x{stroke-dashoffset:0}.talk .bb{opacity:1}.food .cap{opacity:0}.alarm .sun{transform:none}.win .blind{transform:none}
+  .streak i.on svg{opacity:1}.race__lane i{width:100%}.race__lane.me i{width:30%}
+}
+</style>
+</head>
+<body class="no-js">
+<div id="spot"></div>
+<main>
+
+<!-- ============ 1 · HERO ============ -->
+<section class="hero" id="s-hero">
+  <div class="hero__grid"></div><div class="hero__beam"></div>
+  <div class="wrap hero__in">
+    <div class="seen">
+      <p class="seen__t">כפי שהופיעה ב:</p>
+      <div class="marquee"><div class="marquee__track" id="seenTrack">
+        <img src="assets/logos/ynet.webp" alt="ynet" width="351" height="150">
+        <img src="assets/logos/yediot.webp" alt="ידיעות אחרונות" width="538" height="68">
+        <img src="assets/logos/mako.webp" alt="mako" width="1888" height="768">
+        <img src="assets/logos/haaretz.webp" alt="הארץ" width="225" height="68">
+        <img src="assets/logos/globes.webp" alt="גלובס" width="799" height="230">
+        <img src="assets/logos/walla.webp" alt="וואלה" width="362" height="98">
+        <img src="assets/logos/laisha.webp" alt="לאשה" width="2559" height="508">
+        <img src="assets/logos/maariv.webp" alt="מעריב" width="414" height="120">
+        <img src="assets/logos/menta.webp" alt="מנטה" width="537" height="135">
+      </div></div>
+    </div>
+    <div class="hero__cols">
+      <div class="hero__copy">
+        <p class="hero__kicker">ד״ר שירלי הרשקו, מומחית בינלאומית  וזוכת המקום הראשון<br class="br-d"> בכנס העולמי להפרעות קשב חושפת:</p>
+        <p class="hero__pre">הדרכה פורצת דרך וחובה למבוגרים עם הפרעת קשב (מאובחנת או חשד):</p>
+        <h1 class="rise">זאת הדרך היחידה שבה אנשים עם ADHD <span class="nw">יכולים לחיות</span><br class="br-d"> את החיים שלהם בשיא <span class="nw">ההגשמה והפוטנציאל</span></h1>
+        <p class="hero__sub">בלי להרגיש שאין לך שליטה על החיים שלך<br>בלי לנסות בכוח "לפתח משמעת עצמית"<br>ובלי להלקות את עצמך כל יום מחדש</p>
+        <div class="ticket">
+          <span class="ticket__ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="M15.5 10.5l6-3.5v10l-6-3.5"/></svg></span>
+          <p class="nw">11.11.26 בשעה 20:30</p>
+        </div>
+        <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
+        <a class="btn" href="#register" data-go>לחץ כאן כדי לשריין את מקומך בהדרכה עכשיו (בחינם)</a>
+      </div>
+      <div class="portrait cut">
+        <span class="glow"></span><span class="ring r2"><i></i></span><span class="ring r1"><i></i></span>
+        <img src="assets/shirley-smile-cut.webp" alt="ד״ר שירלי הרשקו" width="1038" height="1100" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · I KNOW ============ -->
+<section class="sec sec--plum bg-rings know" id="s-know">
+  <div class="wrap">
+    <h2 class="reveal">אני יודעת…</h2>
+    <p class="know__all reveal">ניסית הכל,</p>
+    <div class="uses">
+      <div class="use reveal">
+        <div class="use__viz" aria-hidden="true">
+          <svg class="vz five" viewBox="0 0 220 220">
+            <rect class="board" x="26" y="18" width="168" height="194" rx="16"/>
+            <rect class="clip" x="78" y="6" width="64" height="24" rx="9"/>
+            <g style="--d:.2s"><rect class="box" x="160" y="52" width="16" height="16" rx="4"/><path class="tk" d="M163 60 l4 4 l7 -8"/><rect class="ln" x="46" y="57" width="100" height="6" rx="3"/></g>
+            <g style="--d:1.6s"><rect class="box" x="160" y="92" width="16" height="16" rx="4"/><path class="tk" d="M163 100 l4 4 l7 -8"/><rect class="ln" x="70" y="97" width="76" height="6" rx="3"/></g>
+            <g style="--d:3s"><rect class="box" x="160" y="132" width="16" height="16" rx="4"/><path class="tk" d="M163 140 l4 4 l7 -8"/><rect class="ln" x="56" y="137" width="90" height="6" rx="3"/></g>
+            <g style="--d:4.4s"><rect class="box" x="160" y="172" width="16" height="16" rx="4"/><path class="tk" d="M163 180 l4 4 l7 -8"/><rect class="ln" x="82" y="177" width="64" height="6" rx="3"/></g>
+          </svg>
+        </div>
+        <p>עשית את האבחונים,</p>
+      </div>
+      <div class="use reveal" data-d="1">
+        <div class="use__viz" aria-hidden="true">
+          <svg class="vz talk" viewBox="0 0 220 200">
+            <g class="bb" style="--d:0s"><path class="them" d="M34 70 L22 88 L52 70 Z"/><rect class="them" x="18" y="22" width="132" height="50" rx="17"/><rect class="tl" x="34" y="38" width="98" height="6" rx="3"/><rect class="tl" x="34" y="52" width="62" height="6" rx="3"/></g>
+            <g class="bb" style="--d:1.3s"><path class="me" d="M186 128 L198 146 L168 128 Z"/><rect class="me" x="70" y="86" width="132" height="44" rx="16"/><rect class="ml" x="86" y="101" width="100" height="6" rx="3"/><rect class="ml" x="120" y="114" width="66" height="6" rx="3"/></g>
+            <g class="bb" style="--d:2.6s"><rect class="them" x="18" y="148" width="82" height="38" rx="17"/><circle class="dt" cx="41" cy="167" r="4.6" style="--d:0s"/><circle class="dt" cx="59" cy="167" r="4.6" style="--d:.15s"/><circle class="dt" cx="77" cy="167" r="4.6" style="--d:.3s"/></g>
+          </svg>
+        </div>
+        <p>דיברת עם אנשי המקצוע,</p>
+      </div>
+      <div class="use reveal">
+        <div class="use__viz" aria-hidden="true">
+          <svg class="vz food" viewBox="0 0 220 200">
+            <g class="cap" style="--x:66px;--d:0s;--r0:-20deg;--r1:50deg"><path class="c1" d="M-8 0v-10a8 8 0 0 1 16 0v10z"/><path class="c2" d="M-8 0v10a8 8 0 0 0 16 0v-10z"/></g>
+            <g class="cap" style="--x:156px;--d:1.3s;--r0:30deg;--r1:-40deg"><path class="c1" d="M-8 0v-10a8 8 0 0 1 16 0v10z"/><path class="c2" d="M-8 0v10a8 8 0 0 0 16 0v-10z"/></g>
+            <g class="cap" style="--x:110px;--d:2.6s;--r0:-60deg;--r1:20deg"><path class="c1" d="M-8 0v-10a8 8 0 0 1 16 0v10z"/><path class="c2" d="M-8 0v10a8 8 0 0 0 16 0v-10z"/></g>
+            <g class="apple">
+              <path class="ap" d="M110 78 C97 66 66 70 64 102 C62 134 86 168 101 166 C107 165 108 162 110 162 C112 162 113 165 119 166 C134 168 158 134 156 102 C154 70 123 66 110 78 Z"/>
+              <path class="hl" d="M82 100 C82 90 88 84 96 82"/>
+              <path class="stem" d="M110 78 C110 68 112 60 118 54"/>
+              <path class="leaf" d="M115 66 C122 52 140 50 148 56 C140 68 126 70 115 66 Z"/>
+            </g>
+          </svg>
+        </div>
+        <p>ניסית לאכול בריא אולי גם לקחת תוספים,</p>
+      </div>
+      <div class="use reveal" data-d="1">
+        <div class="use__viz" aria-hidden="true">
+          <svg class="vz alarm" viewBox="0 0 220 200">
+            <defs><clipPath id="skyClip"><rect x="0" y="0" width="220" height="168"/></clipPath></defs>
+            <g clip-path="url(#skyClip)"><g class="sun"><path class="rays" d="M166 104v-10 M166 176v10 M130 140h-10 M202 140h10 M141 115l-7-7 M191 115l7-7 M141 165l-7 7 M191 165l7 7"/><circle cx="166" cy="140" r="24"/></g></g>
+            <line class="hz" x1="16" y1="168" x2="204" y2="168"/>
+            <g class="clk">
+              <path class="bell" d="M60 66 A22 22 0 0 1 90 42 Z"/><path class="bell" d="M120 42 A22 22 0 0 1 150 66 Z"/>
+              <path class="top" d="M88 46 Q105 34 122 46"/>
+              <path class="legs" d="M76 138 l-11 16 M134 138 l11 16"/>
+              <circle class="face" cx="105" cy="100" r="44"/>
+              <path class="hh" d="M105 100 V74"/><path class="mh" d="M105 100 L124 111"/>
+              <circle class="pin" cx="105" cy="100" r="5"/>
+            </g>
+            <path class="wv" d="M48 48 q-10 12 0 24"/><path class="wv w2" d="M162 48 q10 12 0 24"/>
+          </svg>
+        </div>
+        <p>קמת מוקדם בבוקר ניסית לייצר שגרה,</p>
+      </div>
+      <div class="night reveal">
+        <svg class="win" viewBox="0 0 140 160" aria-hidden="true">
+          <defs>
+            <mask id="moonMask"><rect width="140" height="160" fill="#fff"/><circle cx="94" cy="46" r="15" fill="#000"/></mask>
+            <clipPath id="winClip"><rect x="14" y="14" width="112" height="132" rx="5"/></clipPath>
+          </defs>
+          <rect class="sky" x="14" y="14" width="112" height="132" rx="5"/>
+          <circle class="moon" cx="84" cy="52" r="18" mask="url(#moonMask)"/>
+          <circle class="st" cx="36" cy="38" r="1.8" style="--d:0s"/><circle class="st" cx="52" cy="104" r="1.4" style="--d:.8s"/><circle class="st" cx="104" cy="118" r="1.6" style="--d:1.6s"/><circle class="st" cx="30" cy="76" r="1.2" style="--d:2.2s"/>
+          <g clip-path="url(#winClip)"><g class="blind">
+            <rect x="14" y="14" width="112" height="132"/>
+            <path d="M14 30h112M14 46h112M14 62h112M14 78h112M14 94h112M14 110h112M14 126h112"/>
+            <path class="cord" d="M118 14v120"/>
+          </g></g>
+          <rect class="fr" x="10" y="10" width="120" height="140" rx="8"/>
+          <path class="bars" d="M70 14v132M14 80h112"/>
+          <rect class="rod" x="4" y="4" width="132" height="9" rx="4.5"/>
+        </svg>
+        <p>אפילו החשכת לחלוטין את החדר כדי לישון טוב,</p>
+      </div>
+    </div>
+    <div class="streak reveal" aria-hidden="true">
+      <i class="on" style="--d:0s"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3-1-3 0-6 1-9.5z"/></svg></i>
+      <i class="on" style="--d:.5s"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3-1-3 0-6 1-9.5z"/></svg></i>
+      <i class="on" style="--d:1s"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3-1-3 0-6 1-9.5z"/></svg></i>
+      <i style="--d:0s;--r:14deg"></i><i style="--d:.12s;--r:-10deg"></i><i style="--d:.24s;--r:18deg"></i><i style="--d:.36s;--r:-16deg"></i>
+    </div>
+    <p class="know__but reveal">אבל שום דבר לא עזר לך.</p>
+  </div>
+</section>
+
+<!-- ============ 3 · SO YOU STEPPED ON YOURSELF ============ -->
+<section class="sec bg-grid self" id="s-self">
+  <div class="wrap">
+    <h2 class="reveal">אז פשוט דרכת על עצמך….</h2>
+    <div class="slaps">
+      <div class="slaps__brain reveal" aria-hidden="true">
+        <span class="rg"></span>
+        <img src="assets/brain-clear.webp" alt="" width="264" height="310" loading="lazy">
+        <svg class="crack" viewBox="0 0 250 250"><path d="M104 62 L118 88 L106 104 L128 124 L116 146 L132 166"/><path d="M118 88 L140 80 M128 124 L150 126"/></svg>
+      </div>
+      <p class="note n1 reveal" style="--r:-2.4deg">קראת לעצמך עצלן,</p>
+      <p class="note n2 reveal" data-d="1" style="--r:1.8deg">זה שיודע להתחיל אבל לא לסיים,</p>
+      <p class="note n3 reveal" data-d="2" style="--r:2.2deg">זה שדוחה דברים חשובים לסוף אבל בסוף מאכזב אחרים ואת עצמו,</p>
+      <p class="note n4 reveal" data-d="3" style="--r:-1.6deg">זה שמבפנים מרגיש מלא פוטנציאל אבל משותק מדי לזוז.</p>
+    </div>
+    <p class="said reveal">״המוח שלי מקולקל, נדפקתי מ-Day 1.״</p>
+    <p class="heard reveal">אלו חלק מהדברים (העדינים) ששמעתי<br class="br-d"> במשך 20 שנים שאני חוקרת מרצה ומטפלת<br class="br-d"> באנשים עם הפרעות קשב.</p>
+    <div class="stagepics" data-bleed>
+      <figure class="reveal"><img src="assets/stage-brain.webp" alt="ד״ר שירלי הרשקו מרצה" width="1400" height="933" loading="lazy"></figure>
+      <figure class="reveal" data-d="1"><img src="assets/stage-crowd.webp" alt="" width="1400" height="933" loading="lazy"></figure>
+      <figure class="reveal" data-d="2"><img src="assets/stage-purple.webp" alt="" width="1400" height="788" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · NICE TO MEET YOU ============ -->
+<section class="sec sec--plum bg-streaks about" id="s-about">
+  <div class="wrap">
+    <div class="about__grid">
+      <figure class="about__photo reveal"><div class="frame"><img src="assets/clock-tall.webp" alt="ד״ר שירלי הרשקו" width="800" height="1200" loading="lazy"></div></figure>
+      <div class="about__copy">
+        <h2 class="reveal">נעים מאוד, ד״ר שירלי הרשקו</h2>
+        <p class="lead reveal" data-d="1">כבר מעל 20 שנה שאני חוקרת<br> ונושמת את תחום הפרעות הקשב…</p>
+      </div>
+    </div>
+
+    <div class="path">
+      <div class="step">
+        <div class="step__txt"><p class="reveal">עשיתי את הדוקטורט שלי באוניברסיטה העברית,</p></div>
+        <div class="step__viz"><div class="plate reveal"><img src="assets/logos/huji.webp" alt="האוניברסיטה העברית" width="365" height="123" loading="lazy"></div></div>
+      </div>
+      <div class="step">
+        <div class="step__txt"><p class="reveal">אחריו טסתי לאנגליה ושם עשיתי<br class="br-d"> את פוסט הדוקטורט שלי באוניברסיטת סאות׳המפטון<br class="br-d"> אצל אחד מחוקרי הקשב הגדולים בעולם פרופ׳ סמואל קורטז.</p></div>
+        <div class="step__viz"><figure class="poster fly-l"><img src="assets/poster.webp" alt="" width="654" height="910" loading="lazy"></figure></div>
+      </div>
+      <div class="step">
+        <div class="step__txt"><p class="reveal">ב-2019 המחקר שלי זכה במקום הראשון<br class="br-d"> בכנס העולמי להפרעות קשב בפורטוגל<br class="br-d"> (מתוך 295 מחקרים מ-64 מדינות בעולם).</p></div>
+        <div class="step__viz"><figure class="prize reveal"><img src="assets/award.webp" alt="ד״ר שירלי הרשקו עם תעודת המקום הראשון" width="1200" height="900" loading="lazy"></figure></div>
+      </div>
+      <div class="step">
+        <div class="step__txt">
+          <p class="reveal">אני מחברת הספר הרב מכר ״אנשי הקשב״<br class="br-d"> והסופרת של עוד 6 ספרים בנושאים של הפרעות קשב.</p>
+          <div class="books reveal" data-bleed>
+            <img src="assets/book-yaldei.webp" alt="" width="560" height="799" loading="lazy">
+            <img src="assets/book-tzuna.webp" alt="" width="560" height="1037" loading="lazy">
+            <img src="assets/book-anshei.webp" alt="אנשי הקשב" width="560" height="1066" loading="lazy">
+            <img src="assets/book-zugiut.webp" alt="" width="560" height="1027" loading="lazy">
+            <img src="assets/book-hachaim.webp" alt="" width="560" height="921" loading="lazy">
+            <img src="assets/book-eifo.webp" alt="" width="560" height="647" loading="lazy">
+          </div>
+        </div>
+        <div class="step__viz"><figure class="shot reveal"><img src="assets/books-hand.webp" alt="ד״ר שירלי הרשקו עם הספרים שלה" width="800" height="1199" loading="lazy"></figure></div>
+      </div>
+      <div class="step">
+        <div class="step__txt">
+          <p class="reveal">ויש לי את הזכות לנהל קהילה של מעל ל-60,000 אנשי קשב בישראל,<br class="br-d"> ולהוביל פודקאסט עם קרוב למיליון האזנות.</p>
+          <div class="pod reveal" aria-hidden="true">
+            <img src="assets/podcast.webp" alt="" width="700" height="700" loading="lazy">
+            <div class="pod__ui">
+              <div class="pod__eq"><i style="--d:0s"></i><i style="--d:.2s"></i><i style="--d:.45s"></i><i style="--d:.1s"></i><i style="--d:.6s"></i><i style="--d:.3s"></i><i style="--d:.75s"></i><i style="--d:.15s"></i><i style="--d:.5s"></i></div>
+              <span class="pod__play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+              <span class="pod__bar"><i></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="step__viz"><figure class="shot reveal"><img src="assets/headphones.webp" alt="ד״ר שירלי הרשקו באולפן" width="800" height="1198" loading="lazy"></figure></div>
+      </div>
+    </div>
+
+    <div class="rows">
+      <div class="rows__film" data-film="1" data-bleed><div class="rows__track">
+        <figure><img src="assets/tv-hadashot12.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/press-yediot-cover.webp" alt="" width="900" height="1200" loading="lazy"></figure>
+        <figure><img src="assets/tv-olam-haboker-masachim.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/press-pnima.webp" alt="" width="1162" height="765" loading="lazy"></figure>
+        <figure><img src="assets/tv-knesset.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/tv-niv-raskin.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/press-7days.webp" alt="" width="751" height="984" loading="lazy"></figure>
+        <figure><img src="assets/tv-avri-sharki.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/tv-ma-hasheela.webp" alt="" width="640" height="360" loading="lazy"></figure>
+      </div></div>
+      <div class="rows__film" data-film="-1" data-bleed><div class="rows__track">
+        <figure><img src="assets/tv-paula-limudim.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/press-ynet.webp" alt="" width="885" height="414" loading="lazy"></figure>
+        <figure><img src="assets/tv-olam-haboker-zugiut.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/press-yediot-diag.webp" alt="" width="940" height="788" loading="lazy"></figure>
+        <figure><img src="assets/tv-paula-impulsiv.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/tv-paula-dchiyanut.webp" alt="" width="640" height="360" loading="lazy"></figure>
+        <figure><img src="assets/tv-paula-ivchun.webp" alt="" width="640" height="360" loading="lazy"></figure>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · YOUR BRAIN WORKS DIFFERENTLY ============ -->
+<section class="sec bg-dots news" id="s-news">
+  <div class="wrap">
+    <p class="news__ask reveal">והבשורה הכי חזקה שיש לי בשבילך?</p>
+    <h2 class="reveal" data-d="1">המוח שלך עובד אחרת.</h2>
+    <div class="brainorb reveal" aria-hidden="true">
+      <span class="orb" style="--in:0%;--t:13s;--dir:normal;--c:var(--a1)"><i></i></span>
+      <span class="orb" style="--in:9%;--t:7s;--dir:reverse;--c:var(--a2)"><i></i></span>
+      <span class="orb" style="--in:18%;--t:17s;--dir:normal;--c:var(--a2-soft)"><i></i></span>
+      <span class="orb" style="--in:4%;--t:23s;--dir:reverse;--c:var(--a1-soft)"><i></i></span>
+      <img src="assets/brain-clear.webp" alt="" width="264" height="310" loading="lazy">
+    </div>
+    <p class="news__live reveal">בשידור LIVE מיוחד מהבית שלך אני הולכת לחשוף<br class="br-d"> את הדרך היחידה שהמדע מכיר היום בטיפול בהפרעות קשב.</p>
+    <figure class="zoomwin reveal">
+      <div class="zoomwin__bar"><i></i><i></i><i></i><b></b></div>
+      <img src="assets/zoom-shirley.webp" alt="ד״ר שירלי הרשקו בזום" width="800" height="450" loading="lazy">
+      <div class="zoomwin__tools" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>
+        <svg viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="M15.5 10.5l6-3.5v10l-6-3.5"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.6a3.2 3.2 0 010 6.3M18 14.3c1.8.8 3 2.6 3 4.7"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>
+        <svg viewBox="0 0 24 24" class="end"><path d="M3 14c5-5 13-5 18 0l-2.5 2.5-3.5-2v-2.4c-2-.7-4-.7-6 0v2.4l-3.5 2z"/></svg>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 6 · REAL SCIENCE ============ -->
+<section class="sec sec--plum bg-grid science" id="s-science">
+  <div class="wrap">
+    <p class="science__big reveal">מדע אמיתי.</p>
+    <div class="flow"><p class="reveal">לא שמועות, לא רילסים שראית באינסטגרם, לא המלצות<br class="br-d"> מרופאים או מטפלים כלליים שלא למדו את הנושא.</p></div>
+    <div class="nope reveal" aria-hidden="true">
+      <span style="--d:0s"><svg viewBox="0 0 24 24"><path d="M4 5h11a2 2 0 012 2v6a2 2 0 01-2 2H9l-4 3.5V15H4a2 2 0 01-2-2V7a2 2 0 012-2z"/><path d="M19 9h1a2 2 0 012 2v5a2 2 0 01-2 2h-.5v2.5L16 18h-3"/></svg><svg class="x" viewBox="0 0 100 100"><path d="M20 20 L80 80 M80 20 L20 80"/></svg></span>
+      <span style="--d:.6s"><svg viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="2.6"/><path d="M10.5 9.2v5.6l4.4-2.8z"/></svg><svg class="x" viewBox="0 0 100 100"><path d="M20 20 L80 80 M80 20 L20 80"/></svg></span>
+      <span style="--d:1.2s"><svg viewBox="0 0 24 24"><path d="M6 3H5v5a4.5 4.5 0 009 0V3h-1"/><path d="M9.5 12.5v2.5a5 5 0 0010 0v-2"/><circle cx="19.5" cy="11" r="2"/></svg><svg class="x" viewBox="0 0 100 100"><path d="M20 20 L80 80 M80 20 L20 80"/></svg></span>
+    </div>
+    <div class="flow"><p class="reveal">אני הולכת להביא את הדאטה מהמחקרים שלי<br class="br-d"> ומהמחקרים של המומחים העולמיים<br class="br-d"> ולתת לך את הפתרון האמיתי להפרעות קשב וריכוז.</p></div>
+    <figure class="browser reveal"><div class="browser__bar"><i></i><i></i><i></i></div><img src="assets/pubmed-list.webp" alt="המחקרים של ד״ר שירלי הרשקו" width="1100" height="1339" loading="lazy"></figure>
+    <ul class="sofar">
+      <li class="reveal"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></i><span>כדי שתוכל לחיות בשיא.</span></li>
+      <li class="reveal" data-d="1"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></i><span>כדי שתוכל להגשים את עצמך באמת.</span></li>
+      <li class="reveal" data-d="2"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></i><span>כדי שבמקום להלקות את עצמך, תהיה גאה.</span></li>
+    </ul>
+    <div class="statrail reveal"><p>הפרעות קשב וריכוז זה כוח עצום שעדיין לא גילית איך להשתמש בו.</p></div>
+    <div class="flow"><p class="reveal">ואם יש לך באמת הפרעת קשב ואתה מבין<br class="br-d"> איך לנצל אותה ולהשתמש בה לטובתך,</p></div>
+    <div class="power reveal" aria-hidden="true">
+      <svg class="rg" viewBox="0 0 200 200">
+        <defs><linearGradient id="gPow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4b55"/><stop offset="1" stop-color="#b80c1e"/></linearGradient></defs>
+        <circle class="tr" cx="100" cy="100" r="88"/><circle class="fl" cx="100" cy="100" r="88"/>
+      </svg>
+      <svg class="bolt" viewBox="0 0 24 24"><path d="M13.5 2L4.5 13.5h6.2L9.5 22l9-11.5h-6.2z"/></svg>
+    </div>
+    <p class="close reveal">אתה תרגיש שאתה מקבל כוחות על.</p>
+  </div>
+</section>
+
+<!-- ============ 7 · SAVE YOUR SEAT ============ -->
+<section class="sec bg-streaks reg" id="s-reg">
+  <div class="wrap">
+    <form class="seat" id="register" novalidate data-seat>
+      <img class="seat__ava" src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
+      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 20:30</span></p>
+      <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
+      <div class="buyform">
+        <label for="n1">שם פרטי</label>
+        <input id="n1" name="name" type="text" autocomplete="given-name" dir="rtl" required>
+        <label for="m1">אימייל</label>
+        <input id="m1" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com" required>
+        <label class="seat__ok"><input type="checkbox" name="consent"><span>אני מאשר לקבל עדכונים ותוכן במייל</span></label>
+      </div>
+      <p class="seat__note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v6M12 16.5v.5"/></svg><span>שים לב: המקומות בזום מוגבלים טכנולוגית. ההדרכות שלי מתמלאות בדרך כלל עד אפס מקום, ולכן כדאי לשריין את המקום שלך עכשיו. הקישור לזום יישלח רק למי שנרשם מראש.</span></p>
+      <button class="btn btn--pulse" type="submit">לחץ כאן כדי לשריין את מקומך בהדרכה עכשיו (בחינם)</button>
+      <p class="seat__demo">דמו: הטופס עוד לא מחובר</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 8 · HARDER THAN EVERYONE ============ -->
+<section class="sec sec--plum bg-rings hard" id="s-hard">
+  <div class="wrap">
+    <h2 class="reveal">אנשים עם הפרעות קשב מרגישים שהם עושים קצת<br class="br-d"> אבל בפועל? הם עובדים יותר קשה מכולם רק כדי להחזיק מעמד…</h2>
+    <div class="racebox reveal" aria-hidden="true">
+      <div class="race"><div class="race__lane"><i></i></div><div class="race__lane"><i></i></div><div class="race__lane me"><i></i></div><div class="race__lane"><i></i></div></div>
+    </div>
+    <p class="lead reveal">אני רוצה לעזור לך להיות משוחרר.</p>
+    <figure class="free reveal"><img src="assets/street-free.webp" alt="ד״ר שירלי הרשקו" width="800" height="1200" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ============ 9 · WHO IT IS FOR ============ -->
+<section class="sec bg-dots who" id="s-who">
+  <div class="wrap">
+    <div class="letter">
+      <div class="letter__txt">
+        <h2 class="reveal">למי מתאים השידור?</h2>
+        <p class="reveal">למען האמת, אני פונה רק לסוג אחד של אנשים.</p>
+        <p class="reveal">לאלו שבאמת כואב להם מבפנים.</p>
+        <p class="reveal">לאלו שהבינו כבר שאם משהו לא ישתנה עכשיו,<br class="br-d"> השנים יעברו, והם ירגישו אומללים.</p>
+        <p class="reveal">עם חוסר סיפוק שמגיע עם חשיבת יתר שגומרת לכם על הנפש.</p>
+        <p class="reveal">זה קשה לשמוע. זה נוגע במקום כואב,<br class="br-d"> במקום רגיש.</p>
+        <p class="reveal">אבל זה נכון.</p>
+        <p class="reveal">החדשות הטובות זה שאתם יכולים להרגיש<br class="br-d"> אחרת ב-180 מעלות. לעשות שינוי כל כך קיצוני<br class="br-d"> שאתם לא תכירו את עצמכם.</p>
+        <p class="reveal">התקופה הכי טובה של החיים שלכם עוד לא התחילה.</p>
+        <p class="reveal">השידור הזה הוא חובה,<br>הוא לא רשות.</p>
+        <p class="reveal">ואני מעבירה אותו בצורה שיהיה לך קלי קלות<br class="br-d"> להקשיב להכל ולרצות עוד.</p>
+        <p class="reveal">אז זה הזמן לשריין מקום לשידור<br class="br-d"> כי לא בטוח שהדף הזה יקפוץ לך שוב…</p>
+        <div class="sign reveal">
+          <img src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
+          <p>באהבה, ד״ר שירלי הרשקו</p>
+        </div>
+      </div>
+      <figure class="letter__pic reveal"><img src="assets/blue-chair.webp" alt="ד״ר שירלי הרשקו" width="800" height="1200" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 · LAST CALL ============ -->
+<section class="sec sec--plum bg-grid final" id="s-final">
+  <div class="wrap">
+    <h2 class="final__t reveal">המקומות בזום מוגבלים טכנולוגית<br>שריין את המקום שלך עכשיו</h2>
+    <form class="seat reveal" id="register2" novalidate data-seat>
+      <img class="seat__ava" src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
+      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 20:30</span></p>
+      <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
+      <div class="buyform">
+        <label for="n2">שם פרטי</label>
+        <input id="n2" name="name" type="text" autocomplete="given-name" dir="rtl" required>
+        <label for="m2">אימייל</label>
+        <input id="m2" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com" required>
+        <label class="seat__ok"><input type="checkbox" name="consent"><span>אני מאשר לקבל עדכונים ותוכן במייל</span></label>
+      </div>
+      <button class="btn" type="submit">לחץ כאן כדי לשריין את מקומך בהדרכה עכשיו (בחינם)</button>
+      <p class="seat__demo">דמו: הטופס עוד לא מחובר</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <p>© ד״ר שירלי הרשקו, כל הזכויות שמורות</p>
+</footer>
+
+<script src="lp.js"></script>
+<script>
+(function(){
+  var d=document;
+  /* a dash never opens a line: the space before it becomes a non-breaking one (the text itself stays the same) */
+  var tw=d.createTreeWalker(d.querySelector("main"),NodeFilter.SHOW_TEXT,null),tn;
+  while((tn=tw.nextNode())) if(/ [-–] /.test(tn.nodeValue)) tn.nodeValue=tn.nodeValue.replace(/ ([-–]) /g," $1 ");
+  /* a hyphenated word (ב-2019, מ-Day) never splits across two lines */
+  var hw=d.createTreeWalker(d.querySelector("main"),NodeFilter.SHOW_TEXT,null),hs=[];
+  while((tn=hw.nextNode())) if(/[^\s-]-[^\s-]/.test(tn.nodeValue)&&!tn.parentNode.closest(".rise,.nw")) hs.push(tn);
+  hs.forEach(function(t){
+    var f=d.createDocumentFragment();
+    t.nodeValue.split(/(\S*[^\s-]-[^\s-]\S*)/).forEach(function(p,i){
+      if(!p) return;
+      if(i%2){ var s=d.createElement("span"); s.className="nw"; s.textContent=p; f.appendChild(s); } else f.appendChild(d.createTextNode(p));
+    });
+    t.parentNode.replaceChild(f,t);
+  });
+  [].forEach.call(d.querySelectorAll(".btn"),function(b){ b.textContent=b.textContent.replace(/ (\S{1,13})\s*$/," $1"); });
+  /* countdown: 11.11.2026 20:30 Israel time (UTC+2 in November) */
+  var T=Date.UTC(2026,10,11,18,30,0),boxes=[].slice.call(d.querySelectorAll("[data-cd]"));
+  function two(n){ return (n<10?"0":"")+n; }
+  function tick(){
+    var s=Math.max(0,Math.floor((T-Date.now())/1000)),v={d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60};
+    boxes.forEach(function(b){ ["d","h","m","s"].forEach(function(u){ b.querySelector('[data-u="'+u+'"]').textContent=two(v[u]); }); });
+  }
+  tick(); setInterval(tick,1000);
+
+  /* the hero button glides to the first form (lp.js scrolls), then the name field is ready */
+  var go=d.querySelector("[data-go]");
+  if(go) go.addEventListener("click",function(){ setTimeout(function(){ try{ d.getElementById("n1").focus({preventScroll:true}); }catch(e){} },700); });
+
+  /* both forms. DEMO ONLY: the real version sends the lead to the mailing list, then goes to the thank you page */
+  [].forEach.call(d.querySelectorAll("[data-seat]"),function(form){
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var req=form.querySelectorAll("input[required]");
+      var bad=[].filter.call(req,function(i){ return !i.value.trim()||!i.checkValidity(); });
+      [].forEach.call(req,function(i){ i.style.borderColor=bad.indexOf(i)>-1?"var(--a1)":""; });
+      if(bad.length){ bad[0].focus(); return; }
+      location.href="todah.html?n="+encodeURIComponent(form.querySelector('input[name="name"]').value.trim());
+    });
+  });
+})();
+</script>
+</body>
+</html>

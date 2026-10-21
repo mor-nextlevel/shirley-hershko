@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>הדרכת הורים לילדי הקשב | ד״ר שירלי הרשקו</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lp.css">
+<style>
+/* ---- page parts that are not in the kit, built in the same language ---- */
+/* hero: a real photo with a background sits in a disc inside the rings */
+.portrait.disc img{left:50%;top:44%;bottom:auto;width:80%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 18%;border-radius:50%;
+  transform:translate(-50%,-50%);-webkit-mask-image:none;mask-image:none;box-shadow:0 0 0 1px var(--a2-line),0 30px 70px -20px rgba(0,0,0,.8)}
+.fc--badge .stars{color:var(--a1-deep)}
+
+/* the week grid: 7 days x 24 hours, one hour lit */
+.week{max-width:760px;margin:clamp(30px,5vw,50px) auto 0;padding:clamp(18px,3vw,30px);border-radius:22px;border:1px solid var(--a2-line);
+  background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.week__grid{display:grid;grid-template-columns:repeat(24,1fr);gap:clamp(3px,.6vw,6px);direction:ltr}
+.week__grid i{aspect-ratio:1;border-radius:50%;background:rgba(var(--a2-rgb),.55);box-shadow:0 0 8px rgba(var(--a2-rgb),.35);
+  opacity:0;transform:scale(.4);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}
+.week.in .week__grid i{opacity:1;transform:none}
+.week__grid i.one{background:var(--a1);box-shadow:0 0 14px 3px rgba(var(--a1-rgb),.8)}
+.week__legend{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:20px;font-size:15px;color:var(--t-mid)}
+.week__legend span{display:inline-flex;align-items:center;gap:9px}
+.week__legend span::before{content:"";width:12px;height:12px;border-radius:50%;background:rgba(var(--a2-rgb),.7)}
+.week__legend span.one::before{background:var(--a1);box-shadow:0 0 10px rgba(var(--a1-rgb),.9)}
+.no-js .week__grid i{opacity:1;transform:none}
+.mega.small{font-size:clamp(64px,13vw,150px)}
+
+/* four numbers */
+.stats4{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:860px;margin:clamp(26px,4vw,40px) auto 0}
+.stats4 div{padding:20px 14px;border-radius:18px;text-align:center;border:1px solid var(--a2-line);background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.stats4 b{display:block;font-size:clamp(34px,5vw,52px);font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.stats4 span{display:block;margin-top:8px;font-size:15px;color:var(--t-mid);line-height:1.35}
+@media (min-width:760px){.stats4{grid-template-columns:repeat(4,1fr)}}
+
+/* award: the stage photo and the poster */
+.award{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(12px,2vw,22px);max-width:820px;margin:clamp(24px,3.6vw,40px) auto 0;align-items:center}
+.award figure{border-radius:20px;overflow:hidden;border:1px solid var(--a2-line);box-shadow:0 26px 60px -26px rgba(0,0,0,.9)}
+.award figure:last-child{rotate:3deg}
+
+/* tv stills in the moving rows */
+.rows__track figure{flex:none;width:320px;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(var(--ivory-rgb),.08);box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+.rows__track figure img{width:100%;height:180px;object-fit:cover;-webkit-user-drag:none}
+.rows__track figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;direction:rtl;text-align:right;font-size:14px;font-weight:700;line-height:1.3;
+  background:linear-gradient(0deg,rgba(var(--bg-rgb),.92),transparent)}
+@media (max-width:760px){.rows__track figure{width:240px}.rows__track figure img{height:135px}}
+
+/* the family photo */
+.family{max-width:860px;margin:clamp(26px,4vw,44px) auto 0}
+.family .frame img{width:100%}
+
+/* video with a poster, the player loads on click */
+.vlite{position:relative;max-width:900px;margin:clamp(26px,4vw,44px) auto 0;aspect-ratio:16/9;border-radius:22px;overflow:hidden;cursor:pointer;
+  border:1px solid var(--a2-line);box-shadow:0 30px 80px -30px rgba(0,0,0,.95),0 0 60px -20px rgba(var(--a2-rgb),.35);background:var(--sf-3)}
+.vlite img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.vlite:hover img{transform:scale(1.03)}
+.vlite::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 50%,transparent,rgba(var(--bg-rgb),.45))}
+.vlite__play{position:absolute;z-index:2;left:50%;top:50%;width:clamp(68px,9vw,96px);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);
+  background:var(--a1-grad);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(var(--a1-rgb),.18),0 0 50px rgba(var(--a1-rgb),.6);animation:pulseRing 2.4s ease-in-out infinite}
+.vlite__play svg{width:38%;height:38%;fill:var(--a1-ink);margin-left:6%}
+.vlite iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@keyframes pulseRing{50%{box-shadow:0 0 0 18px rgba(var(--a1-rgb),.06),0 0 70px rgba(var(--a1-rgb),.7)}}
+
+/* five stops on the snake */
+@media (min-width:860px){.stop:nth-of-type(5){grid-area:5/1}}
+.stop__shot img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;width:100%}
+
+/* product facts as chips */
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:clamp(22px,3vw,32px)}
+.chips span{padding:9px 18px;border-radius:999px;border:1px solid var(--a2-line);background:rgba(var(--a2-rgb),.08);color:var(--a2-soft);font-weight:700;font-size:15.5px}
+.product__name{font-size:clamp(44px,9.4vw,108px)}
+@media (max-width:760px){.stage{margin-inline:calc(-1 * clamp(20px,5vw,52px));max-width:none}}
+
+/* the quote under the faq answer */
+.faq blockquote{margin-top:12px;padding:14px 18px;border-right:3px solid var(--a1);border-radius:10px;background:rgba(var(--a1-rgb),.06);font-weight:400;color:var(--t-hi)}
+.notes2{display:grid;gap:16px;max-width:980px;margin:clamp(30px,4vw,44px) auto 0}
+@media (min-width:860px){.notes2{grid-template-columns:1fr 1fr}.notes2 .pf--gold{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){.vlite__play{animation:none}.week__grid i{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body class="no-js">
+<div id="spot"></div>
+<main>
+
+<!-- ============ 1 · HERO ============ -->
+<section class="hero" id="s-hero">
+  <div class="hero__grid"></div><div class="hero__beam"></div>
+  <div class="wrap hero__in">
+    <div class="seen">
+      <p class="seen__t">כפי שהופיעה ב:</p>
+      <div class="marquee"><div class="marquee__track" id="seenTrack">
+        <img src="assets/logos/ynet.webp" alt="ynet" width="351" height="150">
+        <img src="assets/logos/yediot.webp" alt="ידיעות אחרונות" width="538" height="68">
+        <img src="assets/logos/mako.webp" alt="mako" width="1888" height="768">
+        <img src="assets/logos/haaretz.webp" alt="הארץ" width="225" height="68">
+        <img src="assets/logos/globes.webp" alt="גלובס" width="799" height="230">
+        <img src="assets/logos/walla.webp" alt="וואלה" width="362" height="98">
+        <img src="assets/logos/laisha.webp" alt="לאשה" width="2559" height="508">
+        <img src="assets/logos/maariv.webp" alt="מעריב" width="414" height="120">
+        <img src="assets/logos/menta.webp" alt="מנטה" width="537" height="135">
+      </div></div>
+    </div>
+    <div class="hero__cols">
+      <div class="hero__copy">
+        <p class="hero__kicker">חוקרת הקשב שהמחקר שלה זכה במקום הראשון בעולם,<br>ואמא לשלוש בנות קשב, חושפת:</p>
+        <h1 class="rise">איך לעזור לילד עם הפרעת קשב להאמין בעצמו, להצליח בבית ובבית הספר, ולהחזיר לכם בית רגוע</h1>
+        <p class="hero__sub">גם אם ניסיתם כבר הכל,<br>וגם אם אתם מרגישים שאתם רק מכבים שריפות מהבוקר עד הלילה</p>
+        <p class="ctanote">5 שיעורים קצרים. כשלוש שעות האזנה בסך הכל. בקצב שלכם.</p>
+        <a class="btn" href="#s-offer">כן, אני רוצה לעזור לילד שלי: <span class="lock">פתחו לי את הקורס</span></a>
+      </div>
+      <div class="portrait disc">
+        <span class="glow"></span><span class="ring r2"><i></i></span><span class="ring r1"><i></i></span>
+        <img src="assets/shirley-hero.webp" alt="ד״ר שירלי הרשקו" width="900" height="1350" fetchpriority="high">
+        <figure class="fc fc--shot" data-bleed><img src="assets/award.webp" alt="" width="1200" height="900"></figure>
+        <div class="fc fc--note"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>אמא לשלוש בנות קשב</b><small>ונשואה לאיש קשב</small></span></div>
+        <div class="fc fc--badge"><span class="stars">★★★★★</span><b>מקום ראשון בעולם<br>מבין 295 מחקרים</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · STORY ============ -->
+<section class="sec sec--plum story bg-rings" id="s-story">
+  <div class="wrap">
+    <h2 class="reveal">השעה&nbsp;7:40&nbsp;בבוקר.</h2>
+    <div class="story__flow">
+      <p class="reveal">הנעל השנייה עדיין לא נמצאה,</p>
+      <p class="reveal">התיק לא סגור, הכריך עוד על השיש,</p>
+      <p class="reveal">ואתם אומרים את אותו המשפט בפעם השישית.</p>
+    </div>
+    <h3 class="story__quote gt-a1 reveal">״למה אתה לא מקשיב לי?!״</h3>
+    <div class="story__flow">
+      <p class="reveal">אחר הצהריים, שיעורי הבית שהיו אמורים לקחת עשר דקות<br>נגמרים אחרי שעתיים. בדמעות. לפעמים גם בטריקת דלת.</p>
+      <p class="gap reveal">בערב, כשהבית סוף סוף שקט, מגיעה ההודעה מהמחנכת.</p>
+      <p class="gap reveal">ואתם במיטה, ב-1:20 בלילה, מקלידים בגוגל<br>״איך לעזור לילד עם הפרעת קשב״,<br>וקוראים את המאמר העשרים שאומר לכם ״להיות סבלניים״.</p>
+      <p class="gap reveal"><b>אבל הכי כואב זה לא הבלגן.</b></p>
+      <p class="gap tail reveal">הכי כואב זה לראות את הילד המדהים שלכם<br>מתחיל להאמין שהוא ״הילד הבעייתי״.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · THE BIG IDEA ============ -->
+<section class="sec stats bg-dots" id="s-idea">
+  <div class="wrap">
+    <h2 class="reveal">הרבה הורים מחפשים טיפול לילדים,<br>כשלמעשה <span class="pk gt-a1">ההורים הם כלי הטיפול הכי טוב שיש!</span></h2>
+    <p class="sub reveal" data-d="1">בשבוע יש 168 שעות. גם אם הילד שלכם בטיפול שעה בשבוע,</p>
+    <p class="mega small gt-a1 reveal">167</p>
+    <p class="mega__lbl reveal">שעות בשבוע הוא בעולם האמיתי. איתכם.</p>
+    <div class="week reveal" id="week" aria-hidden="true">
+      <div class="week__grid" id="weekGrid"></div>
+      <div class="week__legend"><span class="one">שעה אחת אצל מטפל</span><span>כל שאר השעות, איתכם</span></div>
+    </div>
+    <p class="lead reveal" style="text-align:center;margin-top:clamp(28px,4vw,44px)">אתם נמצאים עם הילדים שלכם כל הזמן,<br>ואם אתם תדעו מה לעשות, <b>יהיה לילדים שלכם (וגם לכם) טוב יותר.</b></p>
+  </div>
+</section>
+
+<!-- ============ 4 · WHAT DOESN'T WORK ============ -->
+<section class="sec sec--plum dont bg-grid" id="s-dontwork">
+  <div class="wrap">
+    <h2 class="reveal">רק שבינתיים, הנה מה שרוב ההורים עושים,<br>ולמה זה לא עובד:</h2>
+    <ul class="checks">
+      <li class="check check--no reveal"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M7 7l10 10"/><path class="draw" d="M17 7L7 17"/></svg></span><span class="txt">מחכים שזה ״יעבור עם הגיל״, ובינתיים השנים עוברות.</span></li>
+      <li class="check check--no reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M7 7l10 10"/><path class="draw" d="M17 7L7 17"/></svg></span><span class="txt">מענישים, מאיימים ולוקחים את הטלפון, ומגלים שמחר הכל חוזר.</span></li>
+      <li class="check check--no reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M7 7l10 10"/><path class="draw" d="M17 7L7 17"/></svg></span><span class="txt">קוראים עוד פוסט ועוד מאמר, ונשארים עם ערימת עצות שסותרות אחת את השנייה.</span></li>
+      <li class="check check--no reveal" data-d="3"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M7 7l10 10"/><path class="draw" d="M17 7L7 17"/></svg></span><span class="txt">לא מדברים עם הילד על האבחון, כי לא יודעים איך להסביר לו אותו.</span></li>
+    </ul>
+    <p class="dont__tail reveal">זה לא שאתם לא משתדלים. אתם משתדלים כל יום.<br>פשוט אף אחד לא נתן לכם את הידע.</p>
+  </div>
+</section>
+
+<!-- ============ 5 · ABOUT ============ -->
+<section class="sec about bg-grid" id="s-about">
+  <div class="wrap">
+    <div class="about__grid">
+      <figure class="about__photo reveal"><div class="frame"><img src="assets/shirley-door.webp" alt="ד״ר שירלי הרשקו" width="900" height="1350" loading="lazy"></div></figure>
+      <div class="about__copy">
+        <h2 class="reveal">היי, אני פשוט שירלי.<br><span class="gt-a2">ד״ר שירלי הרשקו.</span></h2>
+        <p class="sub reveal" data-d="1">כולם חושבים שאני בתחום כי יש לי הפרעת קשב, או אולי למשפחתי. אבל האמת שהכל התחיל לפני 20 שנה, בתואר הראשון שלי בפסיכולוגיה.</p>
+        <p class="lead reveal" data-d="2">משם המשכתי לתואר שני באבחון וטיפול בלקויות למידה והפרעות קשב באוניברסיטת חיפה, לדוקטורט באוניברסיטה העברית, ולפוסט דוקטורט באוניברסיטת סאות׳המפטון באנגליה, אצל פרופ׳ סמואל קורטז, מהחוקרים המובילים בעולם בתחום הפרעת הקשב.</p>
+      </div>
+    </div>
+    <div class="about__more">
+      <p class="reveal">ב-2019, בכנס העולמי להפרעות קשב בפורטוגל,<br><b class="hot">המחקר שלי זכה במקום הראשון מבין 295 מחקרים מ-64 מדינות.</b></p>
+      <div class="award" data-bleed>
+        <figure class="fly-r"><img src="assets/award.webp" alt="" width="1200" height="900" loading="lazy"></figure>
+        <figure class="fly-l"><img src="assets/poster.webp" alt="" width="654" height="910" loading="lazy"></figure>
+      </div>
+    </div>
+    <div class="stats4">
+      <div class="reveal"><b class="gt-a1"><span data-count="20">20</span></b><span>שנה של מחקר, אבחון וטיפול</span></div>
+      <div class="reveal" data-d="1"><b class="gt-a1"><span data-count="6">6</span></b><span>ספרים על הפרעת קשב</span></div>
+      <div class="reveal" data-d="2"><b class="gt-a1">+<span data-count="200">200</span></b><span>כתבות בעיתונות</span></div>
+      <div class="reveal" data-d="3"><b class="gt-a1">+<span data-count="20">20</span></b><span>כנסים בארץ ובעולם</span></div>
+    </div>
+    <div class="about__more">
+      <p class="reveal">אני מרצה וחוקרת באוניברסיטה העברית, ובכל שנה שבה לימדתי זכיתי במקום הראשון בקטגוריית המרצה המצטיינת והקורס המצטיין. אני פעילה במשרד החינוך ובכנסת לקידום התחום, ומופיעה בתוכניות הטלוויזיה:</p>
+    </div>
+    <div class="rows">
+      <div class="rows__film" data-film="1" data-bleed><div class="rows__track">
+        <figure><img src="assets/tv-hadashot12.webp" alt="" width="640" height="360" loading="lazy"><figcaption>חדשות 12, הפרעת קשב במבוגרים</figcaption></figure>
+        <figure><img src="assets/tv-olam-haboker-masachim.webp" alt="" width="640" height="360" loading="lazy"><figcaption>העולם הבוקר, מסכים והפרעת קשב</figcaption></figure>
+        <figure><img src="assets/tv-knesset.webp" alt="" width="640" height="360" loading="lazy"><figcaption>הרצאה בכנסת</figcaption></figure>
+        <figure><img src="assets/tv-niv-raskin.webp" alt="" width="640" height="360" loading="lazy"><figcaption>חדשות הבוקר, שיעור פרטי עם ניב רסקין</figcaption></figure>
+        <figure><img src="assets/tv-avri-sharki.webp" alt="" width="640" height="360" loading="lazy"><figcaption>אברי ושרקי, הפרעת קשב במבוגרים</figcaption></figure>
+        <figure><img src="assets/tv-ma-hasheela.webp" alt="" width="640" height="360" loading="lazy"><figcaption>חדשות, מה השאלה</figcaption></figure>
+      </div></div>
+      <div class="rows__film" data-film="-1" data-bleed><div class="rows__track">
+        <figure><img src="assets/tv-paula-limudim.webp" alt="" width="640" height="360" loading="lazy"><figcaption>פאולה וליאון, הכנה ללימודים</figcaption></figure>
+        <figure><img src="assets/tv-olam-haboker-zugiut.webp" alt="" width="640" height="360" loading="lazy"><figcaption>העולם הבוקר, זוגיות קשובה</figcaption></figure>
+        <figure><img src="assets/tv-paula-impulsiv.webp" alt="" width="640" height="360" loading="lazy"><figcaption>פאולה וליאון, אימפולסיביות</figcaption></figure>
+        <figure><img src="assets/tv-paula-dchiyanut.webp" alt="" width="640" height="360" loading="lazy"><figcaption>פאולה וליאון, דחיינות</figcaption></figure>
+        <figure><img src="assets/tv-paula-ivchun.webp" alt="" width="640" height="360" loading="lazy"><figcaption>פאולה וליאון, אבחון הפרעת קשב</figcaption></figure>
+      </div></div>
+    </div>
+    <div class="clips" data-bleed>
+      <figure class="clip clip--wide fly-r"><div class="clip__bar"><i></i><i></i><i></i></div><img src="assets/press-pnima.webp" alt="" width="1162" height="765" loading="lazy"></figure>
+      <figure class="clip clip--mag fly-l"><img src="assets/press-yediot-cover.webp" alt="" width="900" height="1200" loading="lazy"></figure>
+      <figure class="clip clip--m fly-r"><img src="assets/press-7days.webp" alt="" width="751" height="984" loading="lazy"></figure>
+    </div>
+    <div class="statrail reveal"><p>אבל הכי חשוב:<br><span class="gt-a2">אני נשואה לאיש קשב ואמא לשלוש בנות קשב.</span></p></div>
+    <figure class="family reveal"><div class="frame"><img src="assets/shirley-girls.webp" alt="ד״ר שירלי הרשקו עם הבנות" width="1400" height="933" loading="lazy"></div></figure>
+    <p class="about__teach reveal">אז את הפרעת הקשב אני מכירה מהצד של החוקרת,<br>ומהצד של אמא.</p>
+  </div>
+</section>
+
+<!-- ============ 6 · THE PRODUCT ============ -->
+<section class="sec sec--plum product bg-rings" id="s-product">
+  <div class="wrap">
+    <p class="product__kicker reveal">ואת כל מה שלמדתי, במחקר ובבית, הכנסתי לקורס אחד קצר ומדויק:</p>
+    <h2 class="product__name reveal" data-d="1">הדרכת הורים לילדי הקשב</h2>
+    <p class="product__lead reveal" data-d="2">קורס דיגיטלי שייתן לכם ידע וכלים על הפרעת הקשב.<br>אחריו תדעו לסייע בקשיים, וגם להבליט את החוזקות.</p>
+    <figure class="stage reveal" data-bleed><img src="assets/mk-program.webp" alt="הדרכת הורים לילדי הקשב" width="3072" height="1722" loading="lazy"></figure>
+    <div class="chips reveal"><span>5 שיעורים</span><span>כל שיעור כחצי שעה</span><span>3 עד 4 חלקים בכל שיעור</span><span>כשלוש שעות האזנה</span></div>
+    <p class="lead reveal" style="text-align:center;margin-top:clamp(24px,3vw,34px)">כך תוכלו לתת לילדים שלכם קרקע בטוחה שתאפשר להם לצמוח ולהאמין בעצמם.<br><b>ותחזקו את מערכת היחסים, תפחיתו לחץ, ריבים ותסכולים, ותיצרו בית רגוע.</b></p>
+    <div class="ctabox reveal">
+      <a class="btn" href="#s-offer">כן, אני רוצה לעזור לילד שלי: <span class="lock">פתחו לי את הקורס</span></a>
+      <p class="ctanote">590 ש״ח במקום 850. מתחילים מתי שנוח לכם.</p>
+    </div>
+  </div>
+  <div class="ribbon" data-bleed aria-hidden="true"><div class="ribbon__track" data-ribbon>
+    <span>לזהות</span><i>✦</i><span>לתווך</span><i>✦</i><span>לטפל</span><i>✦</i><span>לחזק</span><i>✦</i><span>ארגז כלים</span><i>✦</i>
+    <span>לזהות</span><i>✦</i><span>לתווך</span><i>✦</i><span>לטפל</span><i>✦</i><span>לחזק</span><i>✦</i><span>ארגז כלים</span><i>✦</i>
+  </div></div>
+</section>
+
+<!-- ============ 7 · ROADMAP ============ -->
+<section class="sec road bg-dots" id="s-syllabus">
+  <div class="wrap">
+    <div class="road__head">
+      <h2 class="reveal">מה תקבלו בקורס?</h2>
+      <p class="sub reveal" data-d="1">5 שיעורים מקיפים ומדויקים. כל שיעור חצי שעה, והוא מחולק ל-3 עד 4 חלקים.</p>
+    </div>
+    <div class="road__track">
+      <svg class="road__path" viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="rmGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb547"/><stop offset="1" stop-color="#a891ff"/></linearGradient></defs>
+        <path class="rm-line rm-base" d="M750,50 C750,100 250,100 250,150 C250,200 750,200 750,250 C750,300 250,300 250,350 C250,400 750,400 750,450"/>
+        <path class="rm-line rm-flow" d="M750,50 C750,100 250,100 250,150 C250,200 750,200 750,250 C750,300 250,300 250,350 C250,400 750,400 750,450"/>
+      </svg>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/shirley-laptop-girl.webp" alt="" width="1200" height="799" loading="lazy"></div>
+        <div class="stop__txt"><p class="tag">שיעור 1</p><h4>לזהות את הקשב</h4><p>איך לזהות הפרעת קשב, כדי שתדעו מתי לעזור, מתי לדרוש ומתי לוותר.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/shirley-writing.webp" alt="" width="900" height="1350" loading="lazy"></div>
+        <div class="stop__txt"><p class="tag">שיעור 2</p><h4>לתרגם את האבחון</h4><p>איך לתווך את האבחון לילדים ולסביבה, כדי שהילד, המורה וגם סבתא יבינו מה באמת קורה.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/shirley-library.webp" alt="" width="1200" height="799" loading="lazy"></div>
+        <div class="stop__txt"><p class="tag">שיעור 3</p><h4>בבית ובכיתה</h4><p>איך לטפל בילדים בבית ובבית הספר, כדי שיצליחו.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/shirley-kids.webp" alt="" width="1400" height="933" loading="lazy"></div>
+        <div class="stop__txt"><p class="tag">שיעור 4</p><h4>קרקע בטוחה</h4><p>איך לחזק את הביטחון העצמי, כדי שהילדים יאמינו בעצמם.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/shirley-smile2.webp" alt="" width="900" height="1039" loading="lazy"></div>
+        <div class="stop__txt"><p class="tag">שיעור 5</p><h4>ארגז הכלים</h4><p>איך לאמץ ארגז כלים שיעזור לכם לטווח הרחוק, גם כשהילד יגדל.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 · TASTE ============ -->
+<section class="sec sec--plum bg-streaks" id="s-taste">
+  <div class="wrap" style="text-align:center">
+    <h2 class="reveal">קבלו טעימה...</h2>
+    <p class="sub reveal" data-d="1">שירלי מציגה את הקורס, בשלוש דקות.</p>
+    <div class="vlite reveal" data-vimeo="734463692" role="button" tabindex="0" aria-label="ניגון הסרטון">
+      <img src="assets/tv-course-intro.webp" alt="" width="640" height="360" loading="lazy">
+      <span class="vlite__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · PARENTS TELL ============ -->
+<section class="sec bg-grid" id="s-proof">
+  <div class="wrap" style="text-align:center">
+    <h2 class="reveal">מה מספרים ההורים שהשתתפו?</h2>
+    <div class="vlite reveal" data-vimeo="810775592" role="button" tabindex="0" aria-label="ניגון הסרטון">
+      <img src="assets/tv-course-parents-tell.webp" alt="" width="640" height="360" loading="lazy">
+      <span class="vlite__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+    </div>
+    <div class="notes2" style="text-align:right">
+      <figure class="pf pf--gold reveal"><div class="pf__head"><span class="pf__ava"></span><span class="pf__who"><i class="pf__name" style="--w:96px"></i><span class="pf__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 011 1v11a1 1 0 01-1 1H10l-5 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></span></span></div><blockquote class="pf__txt">שלוש בנות קשב. שעות של הדרכות הוריות, טיפוליים רגשיים, קריאת ספרים והקשבה לפודקסטים חשבתי שאני ממש במודעות ויודעת כל מה שצריך, ובכל זאת <span class="hl">קורס אחד מדוייק להפליא</span>, חמישה מפגשים שהאירו, חידשו, עשו סדר והביאו הבנה עמוקה, פשוטה וברורה ונתנו צידה להמשך המסע.<br>שירלי, תודה🙏🏻, היה כל כך חשוב! <span class="hl">נגעת בדיוק במה שהיה חסר ואפילו לא ידעתי שחסר.</span></blockquote></figure>
+      <figure class="pf reveal"><div class="pf__head"><span class="pf__ava"></span><span class="pf__who"><i class="pf__name" style="--w:82px"></i><span class="pf__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 011 1v11a1 1 0 01-1 1H10l-5 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></span></span></div><blockquote class="pf__txt">ללא ספק חווייתי שינויים חיוביים בזכות ההשתתפות בקורס וקרו המון התפתחויות. בעיקר חל שיפור במודעות, העצמה ו<span class="hl">עליה משמעותית בביטחון העצמי שלי ושל בתי</span>, וגם בדינמיקה שלה ושל המורים שלה.</blockquote></figure>
+      <figure class="pf reveal" data-d="1"><div class="pf__head"><span class="pf__ava"></span><span class="pf__who"><i class="pf__name" style="--w:104px"></i><span class="pf__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 011 1v11a1 1 0 01-1 1H10l-5 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></span></span></div><blockquote class="pf__txt">רציתי להגיד תודה ענקית על הקורס הוא לימד אותנו המווווון גם על עצמי וגם על הבת שלי ובאמת שהתחלנו ליישם מלא כלים ו<span class="hl">אנחנו רואים שיפור בהמון דברים</span>.</blockquote></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 · FOR WHO ============ -->
+<section class="sec sec--plum who bg-streaks" id="s-who">
+  <div class="wrap">
+    <h2 class="reveal">למי הקורס הזה נבנה?</h2>
+    <ul class="checks">
+      <li class="check check--yes reveal"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M6 12.5l4 4L18 8"/></svg></span><span class="txt">יש לכם ילד או ילדה עם הפרעת קשב, מאובחנים, או שאתם רק מתחילים לחשוד.</span></li>
+      <li class="check check--yes reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M6 12.5l4 4L18 8"/></svg></span><span class="txt">הבית הפך לשדה קרב של בקשות, תזכורות וויכוחים, ואתם רוצים את השקט בחזרה.</span></li>
+      <li class="check check--yes reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M6 12.5l4 4L18 8"/></svg></span><span class="txt">אתם רוצים שהילד יאמין בעצמו, ולא רק ״ישרוד את השנה״.</span></li>
+      <li class="check check--yes reveal" data-d="3"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M6 12.5l4 4L18 8"/></svg></span><span class="txt">אתם רוצים לדעת מה לבקש מבית הספר, ואיך להסביר את זה לסביבה.</span></li>
+      <li class="check check--yes reveal" data-d="4"><span class="ico"><svg viewBox="0 0 24 24"><path class="draw" d="M6 12.5l4 4L18 8"/></svg></span><span class="txt">אין לכם ערב פנוי לעוד סדנה. אתם צריכים משהו שאפשר להאזין לו בדרך לעבודה.</span></li>
+    </ul>
+    <div class="notfor reveal">
+      <h3>ולמה הוא לא נועד</h3>
+      <p class="sub">הקורס לא מחליף אבחון, ולא מחליף טיפול רפואי או רגשי כשצריך אותם. הוא נותן לכם, ההורים, את הידע והכלים להיות שם בשביל הילד בכל שאר השעות.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 · THE OFFER ============ -->
+<section class="sec offer" id="s-offer">
+  <div class="wrap">
+    <h2 class="reveal">הדרכת הורים לילדי הקשב</h2>
+    <p class="sub reveal" data-d="1">זה מה שמחכה לכם:</p>
+    <div class="vstack reveal">
+      <div class="row"><span>שיעור 1, לזהות את הקשב</span><span>כחצי שעה</span></div>
+      <div class="row"><span>שיעור 2, לתרגם את האבחון</span><span>כחצי שעה</span></div>
+      <div class="row"><span>שיעור 3, בבית ובכיתה</span><span>כחצי שעה</span></div>
+      <div class="row"><span>שיעור 4, קרקע בטוחה</span><span>כחצי שעה</span></div>
+      <div class="row"><span>שיעור 5, ארגז הכלים</span><span>כחצי שעה</span></div>
+      <div class="row sum"><span>המחיר הרגיל באתר</span><span>850 ש״ח</span></div>
+    </div>
+    <div class="pricecard reveal">
+      <figure class="mock"><img src="assets/mk-program.webp" alt="" width="3072" height="1722" loading="lazy"></figure>
+      <p class="old"><s>850 ש״ח</s></p>
+      <p class="only">רק</p>
+      <span class="now">590 ש״ח</span>
+      <p class="muted">כשלוש שעות האזנה, בקצב שלכם</p>
+      <div class="ctabox">
+        <a class="btn btn--pulse" href="https://www.drshirleyhershko.com/challenge-page/paretns-yaldey-kashev" target="_blank" rel="noopener">כן, אני רוצה לעזור לילד שלי: <span class="lock">פתחו לי את הקורס</span></a>
+        <p class="paynote">ההרשמה והתשלום באתר של ד״ר שירלי הרשקו.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · FAQ ============ -->
+<section class="sec sec--plum bg-grid" id="s-faq">
+  <div class="wrap">
+    <figure class="faq__figure reveal"><img src="assets/shirley-books.webp" alt="" width="900" height="1350" loading="lazy"></figure>
+    <h2 class="faq__head reveal">שירלי, יש לי שאלה...</h2>
+    <div class="faq reveal">
+      <details open>
+        <summary>הילד שלי עוד לא אובחן. זה מתאים לי?</summary>
+        <p>כן. השיעור הראשון עוסק בדיוק בזה: איך לזהות הפרעת קשב, כדי שתדעו אם, מתי ואיך לעזור. <span class="hot">הקורס לא מחליף אבחון מקצועי</span>, אבל הוא יעזור לכם להבין את מה שאתם רואים בבית.</p>
+      </details>
+      <details>
+        <summary>אין לי זמן. כמה זה באמת לוקח?</summary>
+        <p>משך ההאזנה לקורס כשלוש שעות. 5 שיעורים של כחצי שעה, וכל שיעור מחולק ל-3 עד 4 חלקים, <span class="hot">כך שאפשר להתקדם גם בעשר דקות פנויות.</span></p>
+      </details>
+      <details>
+        <summary>כבר קראתי ספרים, שמעתי פודקאסטים והייתי בהדרכות. מה כבר אלמד?</summary>
+        <p>זה בדיוק מה שחשבה אמא לשלוש בנות קשב, לפני שהשתתפה:</p>
+        <blockquote>״חשבתי שאני ממש במודעות ויודעת כל מה שצריך, ובכל זאת קורס אחד מדוייק להפליא... נגעת בדיוק במה שהיה חסר ואפילו לא ידעתי שחסר.״</blockquote>
+      </details>
+      <details>
+        <summary>הילד שלי כבר בטיפול. למה אנחנו צריכים את זה?</summary>
+        <p>כי הוא בטיפול שעה בשבוע, ואיתכם בכל שאר השעות. <span class="hot">ההורים הם כלי הטיפול הכי טוב שיש.</span> כשאתם יודעים מה לעשות, הלחץ יורד ותוכלו ליהנות יותר מההורות.</p>
+      </details>
+      <details>
+        <summary>איך מקבלים את הקורס?</summary>
+        <p>לוחצים על הכפתור, משלימים את ההרשמה באתר של ד״ר שירלי הרשקו, ומתחילים להאזין מתי שנוח לכם.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 · FINAL ============ -->
+<section class="sec final" id="s-final">
+  <div class="wrap">
+    <div class="pricecard reveal" style="margin-top:0">
+      <figure class="mock"><img src="assets/mk-program.webp" alt="" width="3072" height="1722" loading="lazy"></figure>
+      <img class="quote__ava" src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
+      <div class="quote">אתם נמצאים עם הילדים שלכם כל הזמן, ואם אתם תדעו מה לעשות, <span class="hot">יהיה לילדים שלכם (וגם לכם) טוב יותר.</span></div>
+      <p class="old"><s>850 ש״ח</s></p>
+      <p class="only">רק</p>
+      <span class="now">590 ש״ח</span>
+      <p class="muted">5 שיעורים, כשלוש שעות האזנה</p>
+      <div class="ctabox">
+        <a class="btn btn--pulse" href="https://www.drshirleyhershko.com/challenge-page/paretns-yaldey-kashev" target="_blank" rel="noopener">כן, אני רוצה לעזור לילד שלי: <span class="lock">פתחו לי את הקורס</span></a>
+        <p class="ctanote">תלחצו על הקישור ובואו נתחיל, כי זה קורס משנה חיים!</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <p>© ד״ר שירלי הרשקו, כל הזכויות שמורות</p>
+</footer>
+
+<script>
+/* week grid: 168 hours, one of them with a therapist */
+(function(){var g=document.getElementById("weekGrid");if(!g)return;var h="";for(var i=0;i<168;i++)h+='<i class="'+(i===58?"one":"")+'" style="transition-delay:'+(i*6)+'ms"></i>';g.innerHTML=h;})();
+/* video posters: the player loads only on click */
+document.querySelectorAll(".vlite").forEach(function(v){function go(){if(v.querySelector("iframe"))return;var f=document.createElement("iframe");
+  f.src="https://player.vimeo.com/video/"+v.getAttribute("data-vimeo")+"?autoplay=1&title=0&byline=0&portrait=0";f.allow="autoplay; fullscreen; picture-in-picture";f.allowFullscreen=true;f.title="סרטון";v.appendChild(f);}
+  v.addEventListener("click",go);v.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});});
+</script>
+<script src="lp.js"></script>
+</body>
+</html>
