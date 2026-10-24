@@ -1,0 +1,41 @@
+/* דף ההורים בצבעי הספר "ילדי הקשב" (פסטל קשת, פרפרים). נטען רק ב-horim.html */
+:root{
+  --bg:#fbf8ff; --bg-rgb:251,248,255; --bg-2:#f4effd; --glow-rgb:214,160,240;
+  --sf-1:#ffffff; --sf-2:#fdfbff; --sf-3:#faf6ff; --sf-4:#f3eefc; --sf-5:#f7f3fe; --sf-6:#ffffff; --sf-7:#f1ecfa; --sf-8:#ffffff;
+  --ivory:#241c3a; --ivory-rgb:36,28,58; --t-hi:#241c3a; --t-mid:rgba(36,28,58,.78); --t-low:rgba(36,28,58,.56);
+  --a1:#d9468f; --a1-rgb:217,70,143; --a1-soft:#f3a3c8; --a1-deep:#a62a6a; --a1-line:rgba(var(--a1-rgb),.3);
+  --a1-grad:linear-gradient(118deg,#b38cf5 0%,#e3609f 52%,#f39a62 100%); --a1-ink:#ffffff;
+  --a2:#5bb7d6; --a2-rgb:91,183,214; --a2-soft:#b9e4f1; --a2-line:rgba(var(--a2-rgb),.34);
+  --a2-grad:linear-gradient(118deg,#c4b5fd 0%,#93c5fd 34%,#86efac 66%,#fde68a 100%); --a2-ink:#241c3a;
+  --name-grad:linear-gradient(112deg,#a78bfa,#60a5fa 30%,#34d399 55%,#fbbf24 78%,#f472b6);
+  --ok:#1f9d68; --ok-rgb:31,157,104; --no:#e0506a; --no-rgb:224,80,106;
+}
+/* the book's watercolour rainbow, soft, on every other section */
+html body .sec--plum,html body .hero{background:
+  linear-gradient(100deg,rgba(196,181,253,.42),rgba(147,197,253,.36) 26%,rgba(134,239,172,.32) 50%,rgba(253,230,138,.38) 74%,rgba(249,168,212,.42)),var(--bg)}
+html body .sec,html body .road{color:var(--t-hi)}
+html body .road{background:var(--bg)}
+/* white logos become dark on the light page */
+html body .seen img,html body .plate img{filter:brightness(0) saturate(100%) opacity(.72)}
+/* cards: white paper with a soft shadow instead of glass on black */
+html body .use,html body .check,html body .pf,html body .stop,html body .faq details,html body .seat,html body .notfor,
+html body .papers li,html body .ticket,html body .cd>div,html body .papers-box{background:rgba(255,255,255,.86);
+  border-color:rgba(var(--ivory-rgb),.08);box-shadow:0 18px 40px -26px rgba(80,50,140,.45)}
+html body .science figure.browser.papers-box{background:#fff}
+html body .papers-box .browser__bar{background:#f1ecfa}
+html body .use__viz{background:linear-gradient(165deg,rgba(196,181,253,.25),rgba(147,197,253,.18))}
+html body .btn{color:#fff;text-shadow:0 1px 2px rgba(120,40,90,.35)}
+html body .hl{color:var(--a1-deep)}
+html body .pf--gold{border-color:rgba(var(--a1-rgb),.45)}
+html body .mega.gt-a1,html body .gt-a1{background:var(--name-grad);-webkit-background-clip:text;background-clip:text}
+html body .people svg{fill:rgba(var(--ivory-rgb),.18)}
+html body .people svg.on{fill:var(--a1);filter:drop-shadow(0 0 10px rgba(var(--a1-rgb),.55))}
+/* the butterfly head of the book instead of the gears */
+html body .slaps__brain img,html body .brainorb img{border-radius:50%;object-fit:cover;aspect-ratio:1;box-shadow:0 0 0 4px #fff,0 16px 40px -18px rgba(80,50,140,.6)}
+html body .power .brainred{background:var(--a1-grad)}
+footer{color:var(--t-low)}
+html body.theme-yaldei .hero__kicker{color:var(--t-hi)}
+html body.theme-yaldei .hero__pre{color:var(--a1-deep)}
+html body.theme-yaldei .seen__t{color:var(--a1-deep)}
+html body.theme-yaldei .buyform label{color:var(--t-mid)}
+html body.theme-yaldei .buyform input{background:#fff;color:var(--t-hi)}
