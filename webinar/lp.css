@@ -13,8 +13,8 @@
   --a1:#f0283a; --a1-rgb:240,40,58; --a1-soft:#ff8a94; --a1-deep:#a50c1c; --a1-line:rgba(var(--a1-rgb),.34);
   --a1-grad:linear-gradient(118deg,#ff4b55 0%,#e8202f 50%,#b80c1e 100%); --a1-ink:#ffffff;
   --name-grad:linear-gradient(112deg,#ffffff,#d4d4d8 40%,#f0283a 85%);
-  --a2:#a1a1aa; --a2-rgb:161,161,170; --a2-soft:#d4d4d8; --a2-line:rgba(var(--a2-rgb),.24);
-  --a2-grad:linear-gradient(118deg,#f4f4f5 0%,#a1a1aa 55%,#71717a 100%); --a2-ink:#111113;
+  --a2:#ead9c0; --a2-rgb:234,217,192; --a2-soft:#f6ecdd; --a2-line:rgba(var(--a2-rgb),.26);
+  --a2-grad:linear-gradient(118deg,#fbf5ec 0%,#ead9c0 50%,#b9a27f 100%); --a2-ink:#1e160b;
   /* signals: yes / price, and no / struck price. Kept inside the four colors */
   --ok:#f4f4f5; --ok-rgb:244,244,245; --no:#ff8a94; --no-rgb:255,138,148;
   --maxw:1180px;
@@ -957,3 +957,8 @@ html.heat-at-goal .heat{opacity:0}
 .self .slaps__brain.in img{filter:grayscale(1) brightness(.72);opacity:.85}
 .self .slaps__brain.in::before{opacity:.35;transition:opacity 2.8s ease .8s}
 .no-js .slaps__brain img{filter:grayscale(1) brightness(.72)}
+/* road map without pictures, who checklist heading, questions */
+.road--plain .stop{display:block}
+.road--plain .stop__txt{padding:22px 24px 24px;text-align:center}
+.who__fit{text-align:center;margin-top:clamp(56px,8vw,90px);font-size:clamp(24px,3.2vw,34px)}
+.faqsec .faq__figure img{border-radius:50% 50% 0 0}
