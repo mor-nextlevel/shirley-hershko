@@ -1014,3 +1014,4 @@ html body .faqsec{padding-top:clamp(30px,5vw,70px)}
 .talkvid__sound svg{width:20px;height:20px;fill:none;stroke:var(--a1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .talkvid__sound:hover{background:rgba(var(--a1-rgb),.9)}
 .talkvid__sound:hover svg{stroke:#fff}
+.talkvid__sound{left:auto;right:12px;top:12px;bottom:auto;transform:none;padding:8px 14px;font-size:14px}
