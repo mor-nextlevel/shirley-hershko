@@ -1,0 +1,10 @@
+/* דף ההורים: כהה חם, בורדו וענבר (שירלי בחרה ב-24.10.2026). נטען רק ב-horim.html, אחרי lp.css */
+:root{--bg:#160b0e;--bg-rgb:22,11,14;--bg-2:#1e1013;--glow-rgb:190,60,80;
+--sf-1:#1e1013;--sf-2:#221216;--sf-3:#261418;--sf-4:#30191e;--sf-5:#2a161b;--sf-6:#1a0d10;--sf-7:#13090b;--sf-8:#2c171c;
+--ivory:#fff6ee;--ivory-rgb:255,246,238;--t-hi:#fff6ee;--t-mid:rgba(255,246,238,.76);--t-low:rgba(255,246,238,.52);
+--a1:#f4a63a;--a1-rgb:244,166,58;--a1-soft:#fbd28f;--a1-deep:#c27a16;--a1-line:rgba(244,166,58,.34);--a1-grad:linear-gradient(118deg,#fcc566 0%,#f4a63a 50%,#d9811c 100%);--a1-ink:#2a1606;
+--a2:#f2b8b0;--a2-rgb:242,184,176;--a2-soft:#f9dcd7;--a2-line:rgba(242,184,176,.26);--a2-grad:linear-gradient(118deg,#fde9e6 0%,#f2b8b0 50%,#c98478 100%);--a2-ink:#2a0f0b;
+--name-grad:linear-gradient(112deg,#fde9e6,#f2b8b0 40%,#f4a63a 85%)}
+html body .hero__pre{color:var(--a1)}
+html body .btn{color:#2a1606}
+html body .hero__grid{display:none}
