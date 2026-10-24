@@ -952,3 +952,8 @@ html.heat-at-goal .heat{opacity:0}
 .power .brainred{position:absolute;left:50%;top:50%;width:44%;height:52%;transform:translate(-50%,-50%);background:var(--a1);-webkit-mask:url(assets/brain-clear.webp) center/contain no-repeat;mask:url(assets/brain-clear.webp) center/contain no-repeat;filter:drop-shadow(0 0 14px rgba(var(--a1-rgb),.9))}
 .about__photo img[src*="black-jacket"]{object-position:50.about__photo img[src*="black-jacket"]{object-position:50% 30%}
 .poster{background:#1b1b1b}
+/* self-blame: the colourful brain slowly loses its colour (instead of the red crack) */
+.slaps__brain img{animation:none;filter:none;transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
+.slaps__brain.in img{filter:grayscale(1) brightness(.72);opacity:.85}
+.slaps__brain.in::before{opacity:.35;transition:opacity 2.8s ease .8s}
+.no-js .slaps__brain img{filter:grayscale(1) brightness(.72)}
