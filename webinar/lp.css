@@ -978,3 +978,15 @@ html.heat-at-goal .heat{opacity:0}
 .papers__a b{color:var(--a2);font-weight:700}
 .papers__j{margin-top:8px;font-size:14px;color:var(--t-low)}
 .papers__j span{color:var(--a1-soft);font-weight:700;margin-right:10px}
+/* phone: a calmer opening, the button inside the first screen (countdown stays in both forms) */
+@media (max-width:600px){
+  html body .hero{padding-top:14px}
+  html body .hero .seen{margin-bottom:-6px}
+  html body .hero__kicker{font-size:14px;line-height:1.5}
+  html body .hero__pre{margin-top:10px;font-size:15.5px;line-height:1.45}
+  html body .hero h1{margin-top:8px}
+  html body .hero__sub{margin-top:14px;padding-block:10px;font-size:16px;line-height:1.55}
+  html body .hero .ticket{margin-top:14px;padding-block:8px}
+  html body .hero__copy > .cd{display:none}
+  html body .hero__copy > .btn{margin-top:16px}
+}
