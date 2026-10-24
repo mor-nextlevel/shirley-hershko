@@ -946,3 +946,5 @@ html.heat-at-goal .heat{opacity:0}
 .science .statrail p{text-wrap:balance}
 .learn{padding-bottom:clamp(30px,4vw,56px)}
 .learn + .reg{padding-top:clamp(30px,4vw,56px)}
+.step__txt:has(p.balance){max-width:660px}
+.science .statrail p{max-width:24ch;margin-inline:auto}
