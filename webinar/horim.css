@@ -8,3 +8,18 @@
 html body .hero__pre{color:var(--a1)}
 html body .btn{color:#2a1606}
 html body .hero__grid{display:none}
+
+/* the "ילדי הקשב" head: white line, and every butterfly on its own, resting and flapping now and then */
+.yk{position:relative;aspect-ratio:310/410}
+html body .yk .yk__line{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;transform:none;filter:none;opacity:1;animation:none}
+.yk i{position:absolute;background:url(assets/yaldei-butterflies.png) no-repeat;animation:yk-flap var(--f) ease-in-out var(--d) infinite,yk-float var(--t) ease-in-out var(--d) infinite}
+@keyframes yk-flap{0%,58%,90%,100%{scale:1 1}66%,82%{scale:.3 1}74%{scale:1 1}}
+@keyframes yk-float{0%,100%{translate:0 0;rotate:0deg}30%{translate:3px -4px;rotate:6deg}65%{translate:-3px -1px;rotate:-5deg}}
+html body .slaps__brain .yk{width:62%;animation:none}
+html body .brainorb{width:min(320px,80vw)}
+html body .brainorb .yk{position:absolute;left:50%;top:50%;width:56%;transform:translate(-50%,-50%)}
+.self .slaps__brain .yk{transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
+.self .slaps__brain.in .yk{filter:grayscale(1) brightness(.72);opacity:.85}
+@media (prefers-reduced-motion:reduce){.yk i{animation:none}}
+
+.hard h2 .hard__more{color:var(--a1)}
