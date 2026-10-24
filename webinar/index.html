@@ -32,7 +32,7 @@
 @keyframes onAir{50%{box-shadow:0 0 0 6px rgba(var(--ok-rgb),0);opacity:.55}}
 .ticket p{font-weight:700;font-size:clamp(17px,1.9vw,20px);line-height:1.45}
 
-/* countdown to 11.11.26 20:30 */
+/* countdown to 11.11.26 11:00 */
 .cd{display:flex;justify-content:center;gap:clamp(8px,1.6vw,14px);margin-top:18px}
 .cd div{min-width:clamp(62px,15vw,84px);padding:12px 6px 10px;border-radius:16px;text-align:center;border:1px solid rgba(var(--ivory-rgb),.1);
   background:linear-gradient(170deg,var(--sf-4),var(--sf-1));box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 40px -26px rgba(0,0,0,.9)}
@@ -386,7 +386,7 @@
         <p class="hero__sub">בלי להרגיש שאין לך שליטה על החיים שלך<br>בלי לנסות בכוח "לפתח משמעת עצמית"<br>ובלי להלקות את עצמך כל יום מחדש</p>
         <div class="ticket">
           <span class="ticket__ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="M15.5 10.5l6-3.5v10l-6-3.5"/></svg></span>
-          <p class="nw">11.11.26 בשעה 20:30</p>
+          <p class="nw">11.11.26 בשעה 11:00</p>
         </div>
         <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
         <a class="btn" href="#register" data-go>לחץ כאן כדי לשריין את מקומך בהדרכה עכשיו (בחינם)</a>
@@ -545,7 +545,7 @@
       </div>
       <div class="step">
         <div class="step__txt">
-          <p class="reveal">אני מחברת הספר הרב מכר ״אנשי הקשב״<br class="br-d"> והסופרת של עוד 6 ספרים בנושאים של הפרעות קשב.</p>
+          <p class="reveal">אני מחברת 6 ספרים רבי מכר על הפרעות קשב, ביניהם 'אנשי הקשב'.</p>
           <div class="books reveal" data-bleed>
             <img src="assets/book-yaldei.webp" alt="" width="560" height="799" loading="lazy">
             <img src="assets/book-tzuna.webp" alt="" width="560" height="1037" loading="lazy">
@@ -660,7 +660,7 @@
   <div class="wrap">
     <form class="seat" id="register" novalidate data-seat>
       <img class="seat__ava" src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
-      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 20:30</span></p>
+      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 11:00</span></p>
       <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
       <div class="buyform">
         <label for="n1">שם פרטי</label>
@@ -721,7 +721,7 @@
     <h2 class="final__t reveal">המקומות בזום מוגבלים טכנולוגית<br>שריין את המקום שלך עכשיו</h2>
     <form class="seat reveal" id="register2" novalidate data-seat>
       <img class="seat__ava" src="assets/shirley-ava.webp" alt="" width="360" height="360" loading="lazy">
-      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 20:30</span></p>
+      <p class="seat__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>11.11.26 בשעה 11:00</span></p>
       <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
       <div class="buyform">
         <label for="n2">שם פרטי</label>
@@ -759,8 +759,8 @@
     t.parentNode.replaceChild(f,t);
   });
   [].forEach.call(d.querySelectorAll(".btn"),function(b){ b.textContent=b.textContent.replace(/ (\S{1,13})\s*$/," $1"); });
-  /* countdown: 11.11.2026 20:30 Israel time (UTC+2 in November) */
-  var T=Date.UTC(2026,10,11,18,30,0),boxes=[].slice.call(d.querySelectorAll("[data-cd]"));
+  /* countdown: 11.11.2026 11:00 Israel time (UTC+2 in November) */
+  var T=Date.UTC(2026,10,11,9,0,0),boxes=[].slice.call(d.querySelectorAll("[data-cd]"));
   function two(n){ return (n<10?"0":"")+n; }
   function tick(){
     var s=Math.max(0,Math.floor((T-Date.now())/1000)),v={d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60};

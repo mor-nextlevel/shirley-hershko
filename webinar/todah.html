@@ -92,7 +92,7 @@
 
       <div class="todah__cal reveal">
         <p class="todah__line">ועוד דבר קטן: תכניס את ההדרכה ליומן, כדי ששום דבר אחר לא יתפוס לך את הערב הזה.</p>
-        <p class="todah__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span class="nw">11.11.26 בשעה 20:30</span></p>
+        <p class="todah__when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span class="nw">11.11.26 בשעה 11:00</span></p>
         <div class="cd" data-cd><div><b data-u="d">00</b><span>ימים</span></div><div><b data-u="h">00</b><span>שעות</span></div><div><b data-u="m">00</b><span>דקות</span></div><div><b data-u="s">00</b><span>שניות</span></div></div>
         <div class="todah__links">
           <a class="cal" id="calG" href="#" target="_blank" rel="noopener"><span class="cal__logo" aria-hidden="true"><svg viewBox="0 0 200 200"><g transform="translate(3.75 3.75)"><path fill="#fff" d="M148.882 43.618l-47.368-5.263-57.895 5.263-5.264 52.632 5.263 52.632 52.632 6.579 52.632-6.579 5.263-53.947z"/><path fill="#1A73E8" d="M65.211 125.276c-3.934-2.658-6.658-6.539-8.145-11.671l9.132-3.763c.829 3.158 2.276 5.605 4.342 7.342 2.053 1.737 4.553 2.592 7.474 2.592 2.987 0 5.553-.908 7.697-2.724s3.224-4.132 3.224-6.934c0-2.868-1.132-5.211-3.395-7.026s-5.105-2.724-8.5-2.724h-5.276v-9.039H76.5c2.921 0 5.382-.789 7.382-2.368 2-1.579 3-3.737 3-6.487 0-2.447-.895-4.395-2.684-5.855s-4.053-2.197-6.803-2.197c-2.684 0-4.816.711-6.395 2.145s-2.724 3.197-3.447 5.276l-9.039-3.763c1.197-3.395 3.395-6.395 6.618-8.987 3.224-2.592 7.342-3.895 12.342-3.895 3.697 0 7.026.711 9.974 2.145 2.947 1.434 5.263 3.421 6.934 5.947 1.671 2.539 2.5 5.382 2.5 8.539 0 3.224-.776 5.947-2.329 8.184-1.553 2.237-3.461 3.947-5.724 5.145v.539c2.987 1.25 5.421 3.158 7.342 5.724 1.908 2.566 2.868 5.632 2.868 9.211s-.908 6.776-2.724 9.579c-1.816 2.803-4.329 5.013-7.513 6.618-3.197 1.605-6.789 2.421-10.776 2.421-4.618.013-8.881-1.316-12.815-3.974z"/><path fill="#1A73E8" d="M121.25 79.961l-9.974 7.25-5.013-7.605 17.987-12.974h6.895v61.197h-9.895z"/><path fill="#EA4335" d="M148.882 196.25l47.368-47.368-23.684-10.526-23.684 10.526-10.526 23.684z"/><path fill="#34A853" d="M33.092 172.566l10.526 23.684h105.263v-47.368H43.618z"/><path fill="#4285F4" d="M12.039-3.75C3.316-3.75-3.75 3.316-3.75 12.039v136.842l23.684 10.526 23.684-10.526V43.618h105.263l10.526-23.684L148.882-3.75z"/><path fill="#188038" d="M-3.75 148.882v31.579c0 8.724 7.066 15.789 15.789 15.789h31.579v-47.368z"/><path fill="#FBBC04" d="M148.882 43.618v105.263h47.368V43.618l-23.684-10.526z"/><path fill="#1967D2" d="M196.25 43.618V12.039c0-8.724-7.066-15.789-15.789-15.789h-31.579v47.368z"/></g></svg></span>הוספה ליומן גוגל</a>
@@ -120,15 +120,11 @@
 <script src="lp.js"></script>
 <script>
 (function(){
-  var d=document,wa="https://chat.whatsapp.com/BnCYfTLVxjcApkGMUVOayQ";
-  /* Google Calendar: 11.11.2026 20:30 to 21:30 Israel time (UTC+2 in November), the WhatsApp group inside the event */
-  d.getElementById("calG").href="https://calendar.google.com/calendar/render?action=TEMPLATE"
-    +"&text="+encodeURIComponent("הדרכת זום מיוחדת | ד״ר שירלי הרשקו")
-    +"&dates=20261111T183000Z/20261111T193000Z"
-    +"&details="+encodeURIComponent("הקישור לזום יישלח בקבוצת הוואטסאפ של השידור המיוחד:\n"+wa)
-    +"&location=Zoom";
-  /* countdown, same as the landing page */
-  var T=Date.UTC(2026,10,11,18,30,0),boxes=[].slice.call(d.querySelectorAll("[data-cd]"));
+  var d=document;
+  /* Google Calendar: 11.11.2026 11:00 to 12:00 Israel time, the WhatsApp group inside the event */
+  d.getElementById("calG").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D7%94%D7%93%D7%A8%D7%9B%D7%AA%20%D7%96%D7%95%D7%9D%20%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%AA%20%7C%20%D7%93%D7%B4%D7%A8%20%D7%A9%D7%99%D7%A8%D7%9C%D7%99%20%D7%94%D7%A8%D7%A9%D7%A7%D7%95&dates=20261111T110000%2F20261111T120000&ctz=Asia%2FJerusalem&location=Zoom&details=%D7%94%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%9C%D7%96%D7%95%D7%9D%20%D7%99%D7%99%D7%A9%D7%9C%D7%97%20%D7%91%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%94%D7%95%D7%95%D7%A6%D7%90%D7%A4%20%D7%A9%D7%9C%20%D7%94%D7%A9%D7%99%D7%93%D7%95%D7%A8%3A%20https%3A%2F%2Fchat.whatsapp.com%2FBnCYfTLVxjcApkGMUVOayQ";
+  /* countdown, same as the landing page: 11.11.2026 11:00 Israel time (UTC+2 in November) */
+  var T=Date.UTC(2026,10,11,9,0,0),boxes=[].slice.call(d.querySelectorAll("[data-cd]"));
   function two(n){ return (n<10?"0":"")+n; }
   function tick(){
     var s=Math.max(0,Math.floor((T-Date.now())/1000)),v={d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60};
