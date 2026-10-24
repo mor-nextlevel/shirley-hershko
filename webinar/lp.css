@@ -990,3 +990,10 @@ html.heat-at-goal .heat{opacity:0}
   html body .hero__copy > .cd{display:none}
   html body .hero__copy > .btn{margin-top:16px}
 }
+/* the first four lines: bigger, bolder, easier to read on black */
+html body .hero__kicker{font-weight:500;color:#fff}
+html body .hero__pre{color:#ff4f5e}
+@media (max-width:600px){
+  html body .hero__kicker{font-size:16px;line-height:1.5}
+  html body .hero__pre{font-size:17px;line-height:1.45}
+}
