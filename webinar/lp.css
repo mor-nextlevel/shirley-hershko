@@ -1005,3 +1005,5 @@ html body .hero__pre{color:#ff4f5e}
 /* smaller gap above the questions */
 html body .who{padding-bottom:clamp(40px,6vw,80px)}
 html body .faqsec{padding-top:clamp(30px,5vw,70px)}
+/* real messages: three short ones above the first form */
+.pf-row.pf-row--reg{margin:0 auto clamp(34px,5vw,56px)}
