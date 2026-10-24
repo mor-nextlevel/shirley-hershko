@@ -947,4 +947,5 @@ html.heat-at-goal .heat{opacity:0}
 .learn{padding-bottom:clamp(30px,4vw,56px)}
 .learn + .reg{padding-top:clamp(30px,4vw,56px)}
 .step__txt:has(p.balance){max-width:660px}
-.science .statrail p{max-width:24ch;margin-inline:auto}
+.science .statrail p{max-width:560px;margin-inline:auto}
+@media (min-width:900px){.step:has(p.balance){grid-template-columns:1.3fr .7fr;column-gap:64px}}
