@@ -1028,3 +1028,5 @@ html body .faqsec{padding-top:clamp(30px,5vw,70px)}
 .stats{text-align:center}
 .final .ps{max-width:640px;margin:clamp(26px,4vw,40px) auto 0;text-align:center;font-weight:300;font-size:clamp(16px,1.8vw,18px);line-height:1.6;color:var(--t-mid);text-wrap:balance}
 .who .pf-solo{margin-top:clamp(26px,4vw,40px)}
+/* parents page: a long headline, smaller and balanced */
+html body .hero h1.h1--long{font-size:clamp(25px,3.6vw,40px);line-height:1.18;text-wrap:balance}
