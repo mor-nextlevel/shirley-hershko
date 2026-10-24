@@ -934,3 +934,6 @@ html.heat-at-goal .heat{opacity:0}
   .js .draw3__obj{clip-path:none;transition:none}
   .js .draw3__words span,.js .dash__bars i{transition:none;transform:none;opacity:1}
 }
+
+/* what we will cover */
+.learn h2{text-align:center}
