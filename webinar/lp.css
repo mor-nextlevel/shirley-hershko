@@ -997,3 +997,11 @@ html body .hero__pre{color:#ff4f5e}
   html body .hero__kicker{font-size:16px;line-height:1.5}
   html body .hero__pre{font-size:17px;line-height:1.45}
 }
+/* podcast cover big and square, instead of the headphones photo */
+.shot.shot--sq{aspect-ratio:1/1;width:min(100%,420px)}
+.shot.shot--sq img{object-position:50% 50%}
+/* media rows easier to see on the phone */
+@media (max-width:760px){html body .rows__track figure img{height:170px}}
+/* smaller gap above the questions */
+html body .who{padding-bottom:clamp(40px,6vw,80px)}
+html body .faqsec{padding-top:clamp(30px,5vw,70px)}
