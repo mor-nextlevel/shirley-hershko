@@ -1007,3 +1007,10 @@ html body .who{padding-bottom:clamp(40px,6vw,80px)}
 html body .faqsec{padding-top:clamp(30px,5vw,70px)}
 /* real messages: three short ones above the first form */
 .pf-row.pf-row--reg{margin:0 auto clamp(34px,5vw,56px)}
+/* the lecture video plays by itself without sound, one tap turns the sound on */
+.talkvid__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.talkvid__sound{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:0;border-radius:999px;cursor:pointer;
+  font:700 15px/1 Heebo,system-ui,sans-serif;color:#fff;background:rgba(10,10,11,.72);box-shadow:0 0 0 1px rgba(var(--a1-rgb),.6),0 10px 30px -10px rgba(0,0,0,.9);backdrop-filter:blur(6px)}
+.talkvid__sound svg{width:20px;height:20px;fill:none;stroke:var(--a1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.talkvid__sound:hover{background:rgba(var(--a1-rgb),.9)}
+.talkvid__sound:hover svg{stroke:#fff}

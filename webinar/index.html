@@ -504,7 +504,10 @@
     </div>
     <p class="said reveal">״המוח שלי מקולקל, נדפקתי מ-Day 1.״</p>
     <p class="heard reveal">אלו חלק מהדברים (העדינים) ששמעתי<br class="br-d"> במשך 20 שנים שאני חוקרת, מרצה ומטפלת<br class="br-d"> באנשים עם הפרעות קשב.</p>
-    <figure class="talkvid reveal"><div class="talkvid__frame"><iframe src="https://drive.google.com/file/d/1_LGNVAa2k0dPaWmaInRweVpRM0BGU6eP/preview" title="ד״ר שירלי הרשקו מרצה בטוקהאוס" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div></figure>
+    <figure class="talkvid reveal"><div class="talkvid__frame">
+      <video class="talkvid__v" src="assets/talkhouse.mp4" poster="assets/talkhouse-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="ד״ר שירלי הרשקו מרצה בטוקהאוס"></video>
+      <button class="talkvid__sound" type="button" aria-label="הפעלת קול"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg><span>לשמוע עם קול</span></button>
+    </div></figure>
   </div>
 </section>
 
@@ -843,5 +846,6 @@
   });
 })();
 </script>
+<script>(function(){var b=document.querySelector('.talkvid__sound'),v=document.querySelector('.talkvid__v');if(!b||!v)return;b.addEventListener('click',function(){v.muted=false;v.loop=false;v.currentTime=0;v.controls=true;v.play();b.hidden=true;});})();</script>
 </body>
 </html>
