@@ -39,3 +39,5 @@ html body.theme-yaldei .hero__pre{color:var(--a1-deep)}
 html body.theme-yaldei .seen__t{color:var(--a1-deep)}
 html body.theme-yaldei .buyform label{color:var(--t-mid)}
 html body.theme-yaldei .buyform input{background:#fff;color:var(--t-hi)}
+/* no grid squares behind the opening */
+html body.theme-yaldei .hero__grid{display:none}
