@@ -1047,14 +1047,14 @@ html body .seat__ok.is-bad{color:var(--a1)!important}
 /* the "אנשי הקשב" head on the adults page: every whole gear turns on its own, every other one the other way */
 .gk{position:relative;aspect-ratio:264/310}
 html body .gk .gk__base{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;transform:none;animation:none}
-.gk i{position:absolute;background:url(assets/brain-gears.png) no-repeat;animation:gk-spin var(--t) linear infinite;animation-direction:var(--dir,normal)}
+.gk i{position:absolute;background:url(assets/brain-gears.png) no-repeat;scale:.84;animation:gk-spin calc(var(--t) * .45) linear infinite;animation-direction:var(--dir,normal)}
 @keyframes gk-spin{to{rotate:360deg}}
 html body .slaps__brain .gk{width:56%;animation:none}
 html body .brainorb .gk{position:absolute;left:50%;top:50%;width:46%;transform:translate(-50%,-50%)}
 @media (prefers-reduced-motion:reduce){.gk i{animation:none}}
 /* the red head in the power ring: same gears, painted red, a little smaller so they stand apart while they turn */
 html body .power .gk{position:absolute;left:50%;top:50%;width:44%;transform:translate(-50%,-50%);filter:drop-shadow(0 0 14px rgba(var(--a1-rgb),.9))}
-.gk--red i{background-image:url(assets/brain-gears-red.png);scale:.84}
+.gk--red i{background-image:url(assets/brain-gears-red.png);scale:.8}
 
 /* phones: "נעים מאוד, ד״ר שירלי הרשקו" comes above the photo */
 @media (max-width:859px){
