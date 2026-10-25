@@ -952,11 +952,8 @@ html.heat-at-goal .heat{opacity:0}
 .power .brainred{position:absolute;left:50%;top:50%;width:44%;height:52%;transform:translate(-50%,-50%);background:var(--a1);-webkit-mask:url(assets/brain-left.png) center/contain no-repeat;mask:url(assets/brain-left.png) center/contain no-repeat;filter:drop-shadow(0 0 14px rgba(var(--a1-rgb),.9))}
 .about__photo img[src*="black-jacket"]{object-position:50% 30%}
 .poster{background:#1b1b1b}
-/* self-blame: the colourful brain slowly loses its colour (instead of the red crack) */
-.self .slaps__brain img{animation:none;filter:none;transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
-.self .slaps__brain.in img{filter:grayscale(1) brightness(.72);opacity:.85}
-.self .slaps__brain.in::before{opacity:.35;transition:opacity 2.8s ease .8s}
-.no-js .slaps__brain img{filter:grayscale(1) brightness(.72)}
+/* the head in the self-blame part stays in full colour (Shirley asked for no gray), with no glitch */
+.self .slaps__brain img{animation:none;filter:none}
 /* road map without pictures, who checklist heading, questions */
 .road--plain .stop{display:block}
 .road--plain .stop__txt{padding:22px 24px 24px;text-align:center}
@@ -1054,7 +1051,25 @@ html body .gk .gk__base{position:absolute;inset:0;left:0;top:0;width:100%;height
 @keyframes gk-spin{to{rotate:360deg}}
 html body .slaps__brain .gk{width:56%;animation:none}
 html body .brainorb .gk{position:absolute;left:50%;top:50%;width:46%;transform:translate(-50%,-50%)}
-.self .slaps__brain .gk{transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
-.self .slaps__brain.in .gk{filter:grayscale(1) brightness(.72);opacity:.85}
-html body .slaps__brain .gk .gk__base{filter:none;opacity:1}
 @media (prefers-reduced-motion:reduce){.gk i{animation:none}}
+/* the red head in the power ring: same gears, painted red, a little smaller so they stand apart while they turn */
+html body .power .gk{position:absolute;left:50%;top:50%;width:44%;transform:translate(-50%,-50%);filter:drop-shadow(0 0 14px rgba(var(--a1-rgb),.9))}
+.gk--red i{background-image:url(assets/brain-gears-red.png);scale:.84}
+
+/* phones: "נעים מאוד, ד״ר שירלי הרשקו" comes above the photo */
+@media (max-width:859px){
+  .about__copy{display:contents}
+  .about__copy h2{order:-1;text-align:center}
+  .about__copy .lead{order:1}
+}
+
+/* a small sunrise between "אבל זה נכון." and the good news */
+.dawn{width:120px;margin:22px auto 4px}
+@media (min-width:900px){.letter__txt .dawn{margin-inline:0 auto}}
+.dawn svg{display:block;width:100%;overflow:visible}
+.dawn__line{stroke:rgba(var(--ivory-rgb),.35);stroke-width:2;stroke-linecap:round}
+.dawn__sun{fill:var(--a1);filter:drop-shadow(0 0 10px rgba(var(--a1-rgb),.8));transform:translateY(18px);transition:transform 1.6s var(--ease-out) .2s}
+.dawn__rays path{fill:none;stroke:var(--a1-soft);stroke-width:2.4;stroke-linecap:round;opacity:0;transition:opacity 1s ease 1.3s}
+.dawn.in .dawn__sun,.no-js .dawn__sun{transform:none}
+.dawn.in .dawn__rays path,.no-js .dawn__rays path{opacity:1}
+@media (prefers-reduced-motion:reduce){.dawn__sun{transform:none;transition:none}.dawn__rays path{opacity:1;transition:none}}
