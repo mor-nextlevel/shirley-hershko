@@ -1042,3 +1042,19 @@ html body .pf::before,html body .pf--gold::before{content:"\201D";position:absol
 
 /* the consent box is required: its line turns to the accent color when it was left empty */
 html body .seat__ok.is-bad{color:var(--a1)!important}
+
+/* required fields: a star on every label, and one line that says what is missing */
+.seat .req{color:var(--a1);font-weight:700}
+.seat__err{margin:14px 0 0;color:var(--a1);font-size:15px;font-weight:500;line-height:1.5;text-align:center}
+
+/* the "אנשי הקשב" head on the adults page: every whole gear turns on its own, every other one the other way */
+.gk{position:relative;aspect-ratio:264/310}
+html body .gk .gk__base{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;transform:none;animation:none}
+.gk i{position:absolute;background:url(assets/brain-gears.png) no-repeat;animation:gk-spin var(--t) linear infinite;animation-direction:var(--dir,normal)}
+@keyframes gk-spin{to{rotate:360deg}}
+html body .slaps__brain .gk{width:56%;animation:none}
+html body .brainorb .gk{position:absolute;left:50%;top:50%;width:46%;transform:translate(-50%,-50%)}
+.self .slaps__brain .gk{transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
+.self .slaps__brain.in .gk{filter:grayscale(1) brightness(.72);opacity:.85}
+html body .slaps__brain .gk .gk__base{filter:none;opacity:1}
+@media (prefers-reduced-motion:reduce){.gk i{animation:none}}

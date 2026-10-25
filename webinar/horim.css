@@ -15,11 +15,19 @@ html body .yk .yk__line{position:absolute;inset:0;left:0;top:0;width:100%;height
 .yk i{position:absolute;background:url(assets/yaldei-butterflies.png) no-repeat;animation:yk-flap var(--f) ease-in-out var(--d) infinite,yk-float var(--t) ease-in-out var(--d) infinite}
 @keyframes yk-flap{0%,58%,90%,100%{scale:1 1}66%,82%{scale:.3 1}74%{scale:1 1}}
 @keyframes yk-float{0%,100%{translate:0 0;rotate:0deg}30%{translate:3px -4px;rotate:6deg}65%{translate:-3px -1px;rotate:-5deg}}
-html body .slaps__brain .yk{width:62%;animation:none}
-html body .brainorb{width:min(320px,80vw)}
-html body .brainorb .yk{position:absolute;left:50%;top:50%;width:56%;transform:translate(-50%,-50%)}
-.self .slaps__brain .yk{transition:filter 2.8s ease .8s,opacity 2.8s ease .8s}
-.self .slaps__brain.in .yk{filter:grayscale(1) brightness(.72);opacity:.85}
+/* every head sits in the middle of its ring: the circle around the head and its butterflies
+   (centre 139,205 and radius 215 in the 310x410 picture) is centred and stays inside the inner ring */
+html body .slaps__brain .yk{position:absolute;left:22.15%;top:8.92%;width:62.1%;animation:none}
+html body .self .slaps__brain.in::before{opacity:1}
+html body .slaps__brain .yk .yk__line{filter:none;opacity:1}
+html body .brainorb{width:min(340px,84vw)}
+html body .brainorb .yk{position:absolute;left:26.04%;top:14.66%;width:53.45%;transform:none}
+html body .power{width:min(260px,66vw)}
+html body .power .yk{position:absolute;left:26.68%;top:15.61%;width:52%}
 @media (prefers-reduced-motion:reduce){.yk i{animation:none}}
 
 .hard h2 .hard__more{color:var(--a1)}
+
+/* a shorter gap from "הבית יכול להרגיש אחרת" down to "מה נעבור יחד בהדרכה?" */
+html body .science{padding-bottom:24px}
+html body .science + .learn{padding-top:46px}
